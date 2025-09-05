@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+
+  .settings-icon {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  }
+
+  .settings-icon i {
+    color: #333;
+  }
+
+  /* Estilização dos botões */
+  .btn1 {
+    padding: 2px 6px; /* Reduz o espaçamento interno (padding) */
+    font-size: 10px; /* Reduz o tamanho da fonte */
+    background-color: #007bff; /* Mantém a cor do fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas padrão */
+    border-radius: 4px; /* Borda um pouco menos arredondada */
+    cursor: pointer; /* Mantém o cursor de clique */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s ease; /* Suaviza a transição ao passar o mouse */
+  }
+
+  .btn1:hover {
+    background-color: #0056b3; /* Efeito hover para melhor feedback visual */
+  }
+
+  .slidecontainer {
+    flex-grow: 1; /* Faz o slider ocupar o espaço restante */
+    margin: 0 10px; /* Espaçamento lateral entre o slider e os botões */
+    position: relative;
+  }
+
+  .slider {
+    width: 100%;
+    height: 10px;
+    background: #feae98;
+    outline: none;
+    opacity: 0.9;
+    border-radius: 5px;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    background: #feee00;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #000;
+  }
+
+  .marker {
+    position: absolute;
+    font-size: 14px;
+    text-align: center;
+    max-width: 120px;
+    transform: translateX(-50%);
+    top: 20px;
+  }
+
+  .marker-title {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .marker-subtitle {
+    font-size: 12px;
+    color: #555;
+    display: block;
+    white-space: normal;
+  }
+
+  #tooltip {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    display: none;
+    text-align: center;
+    max-width: 20vw;
+    max-height: 30vh;
+    overflow: auto;
+    font-size: 14px;
+  }
+
+  .tooltip-image {
+    max-width: 120px;
+    max-height: 120px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000;
+  }
+
+  .tooltip-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .tooltip-text {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .tutorial-gif {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 10px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.tutorial-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.modal-dialog.modal-dialog-centered {
+  max-width: 80%; /* Aumenta a largura máxima do modal */
+  width: 100%; /* Faz o modal ocupar toda a largura disponível */
+}
+
+.modal-content {
+  padding: 20px; /* Adiciona espaçamento interno para evitar que o conteúdo fique muito próximo das bordas */
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créditos do Projeto</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--Google Fonts - Lato-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!--CSS Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!--CSS do projeto-->
+    <link rel="stylesheet" href="styles.css">
+    <!--JS Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <div class="container py-3">
+      <a class="navbar-brand" href="#">
+        <img src="images/worldwide.png" alt="Sabores Perdidos"/>
+        <span>Catálogo de Mapas Interativos</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar-items"
+        aria-controls="navbar-items"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-items">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active primary-color" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link primary-color" href="index.html">Globo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link primary-color" href="#contact-container">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+      <!--SLIDER-->
+      <div class="container" id="slider-container">
+        <div class="carousel slide" id="slider" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button class="active" 
+            type="button"
+            data-bs-target="#slider" 
+            data-bs-slide-to="0"
+            aria-current="true"
+            aria-label="Slide 1">
+            </button>
+            <button 
+            type="button"
+            data-bs-target="#slider" 
+            data-bs-slide-to="1"
+            aria-label="Slide 2">
+            </button>
+            <button
+            type="button"
+            data-bs-target="#slider" 
+            data-bs-slide-to="2"
+            aria-label="Slide 3">
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/globo.png" alt="Casa 1" class="d-block w-100" style="height: 650px;">
+              <div class="carousel-caption">
+                <h5>Globo Interativo</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/pagina.png" alt="Casa 2" class="d-block w-100" style="height: 650px;">
+              <div class="carousel-caption">
+                <h5>Páginas Temáticas</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/alemanha.png" alt="Casa 3" class="d-block w-100" style="height: 650px;">
+              <div class="carousel-caption">
+                <h5>Mapas Interativos</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" 
+          type="button" 
+          data-bs-target="#slider"
+          data-bs-slide="prev">
+          <i class="bi bi-chevron-compact-left"></i>
+          <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" 
+          type="button" 
+          data-bs-target="#slider"
+          data-bs-slide="next">
+          <i class="bi bi-chevron-compact-right"></i>
+          <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <br>
+        
+        <div class="container" id="featured-container"> 
+            <div class="col-12">
+                <h2 class="title primary-color">Professores Orientadores</h2>
+                <p class="subtitle secondary-color">Conheça os docentes responsáveis pela orientação do projeto</p>
+            </div>    
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4 profile-card">
+                    <img src="images/max.png" alt="Professor Max Olinto">
+                    <h3>Max Olinto</h3>
+                    <p>Informática</p>
+                </div>
+                <div class="col-12 col-md-4 profile-card">
+                    <img src="images/" alt="Professor Wellington Junio">
+                    <h3>Wellington Junio</h3>
+                    <p>Geografia/História</p>
+                </div>
+                <div class="col-12 col-md-4 profile-card">
+                    <img src="images/" alt="Professor Lorem ipsum">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                    <p>Animi corporis cumque soluta quibusdam perferendis reiciendis, sunt maxime suscipit a!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container" id="scholars-container"> 
+            <div class="col-12">
+                <h2 class="title primary-color">Bolsistas</h2>
+                <p class="subtitle secondary-color">Conheça os bolsistas que contribuem para o projeto</p>
+            </div>    
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4 profile-card">
+                    <img src="images/enzo.jpg" alt="Bolsista Enzo Ribeiro">
+                    <h3>Enzo Ribeiro</h3>
+                    <p>Responsável pelo desenvolvimento do globo, pela criação da estrutura das páginas e pela elaboração dos mapas da Alemanha e da Rússia</p>
+                </div>
+                <div class="col-12 col-md-4 profile-card">
+                    <img src="img/bolsista2.jpg" alt="Bolsista Lorem ipsum">
+                    <h3>Bolsista Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col-12 col-md-4 profile-card">
+                    <img src="img/bolsista3.jpg" alt="Bolsista Lorem ipsum">
+                    <h3>Bolsista Lorem ipsum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+
+      <!--INFO-->
+      <div class="container" id="info-container"> 
+        <div class="col-12">
+          <h2 class="title primary-color">Sobre nosso projeto</h2>
+          <p class="subtitle secondary-color">Explorando mapas vetoriais interativos na geografia</p>
+        </div>
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12 col-md-5" id="info-banner">
+              <img src="images/mapa.png" alt="Mapas Vetoriais Interativos" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-7 bg-secondary-color" id="info-content">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="title primary-color">Inovação no ensino de geopolítica</h2>
+                  <p class="subtitle secondary-color">
+                    Nosso projeto tem como objetivo criar ferramentas interativas baseadas em mapas vetoriais, promovendo uma abordagem inovadora no ensino de geografia. Através de recursos visuais e dinâmicos, os mapas interativos facilitam a exploração de conteúdos geográficos, tornando o aprendizado mais acessível e atraente. Combinando tecnologia e educação, o projeto busca incentivar o interesse por temas como cartografia, história e geociências, contribuindo para a formação acadêmica e o avanço do conhecimento na área.
+                  </p>
+                </div>
+                <div class="col-12" id="info-numbers">
+                  <div class="row">
+                    <div class="col-4">
+                      <h3 class="primary-color">10+</h3>
+                      <p class="secondary-color">Mapas interativos desenvolvidos</p>
+                    </div>
+                    <div class="col-4">
+                      <h3 class="primary-color">5</h3>
+                      <p class="secondary-color">Instituições parceiras</p>
+                    </div>
+                    <div class="col-4">
+                      <h3 class="primary-color">500+</h3>
+                      <p class="secondary-color">Usuários impactados</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <a href="#" class="btn btn-dark">Saiba Mais</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+          
+      <!--FOOTER-->
+<footer class="container-fluid bg-dark-color" id="footer">
+    <div class="container">
+      <div class="row">
+        <!--FOOTER TOP-->
+        <div class="col-12" id="footer-top">
+          <div class="row justify-content-between">
+            <div class="col-4"><h2>Mapas interativos</h2></div>
+            <div class="col-4" id="social-icons">
+              <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.facebook.com/ifsulminascarmominas/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+              <a href="https://x.com/ifsuldeminas" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.youtube.com/@tvifsuldeminascarmodeminas4272" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <!--FOOTER DETAILS-->
+        <div class="col-12" id="footer-details">
+          <div class="row">
+  
+            <div class="col-12 col-md-4" id="news-container">
+              <h4>Sobre o projeto</h4>
+              <p class="secondary-color">
+                Nosso projeto explora o uso de <strong>mapas vetoriais</strong> para melhorar a visualização e análise de informações geográficas. 
+                <a href="#info-container" class="secondary-color">Saiba mais</a>.
+              </p>
+            </div>
+  
+            <div class="col-12 col-md-4" id="contact-container">
+              <h4>Formas de contato</h4>
+              <p class="secondary-color">(35) 99999-9999</p>
+              <p class="secondary-color">
+                <a href="mailto:contato@mapas-interativos.com" id="no-underline" class="secondary-color" style="text-decoration: none;">
+                  contato@mapas-interativos.com
+                </a>
+              </p>
+            </div>
+  
+            <div class="col-12 col-md-4" id="links-container">
+              <h4>Sobre o IFSULDEMINAS</h4>
+              <p class="secondary-color">
+                Projeto desenvolvido no <strong>IFSULDEMINAS - Campus Carmo de Minas</strong>, promovendo inovação e pesquisa em tecnologia e ensino.
+              </p>
+              <a href="https://portal.cdm.ifsuldeminas.edu.br/" target="_blank" class="btn btn-dark">Saiba mais</a>
+            </div>
+  
+            <div class="col-12" id="footer-bottom">
+              <div class="row justify-content-between">
+                <div class="col-12 col-md-3">
+                  <p class="secondary-color">Catálogo de Mapas Interativos &copy; 2025</p>
+                </div>
+              </div>
+            </div>
+  
+  </footer>
+  
+  
+
+  

@@ -1,0 +1,458 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.bg-primary-color {
+    background-color: #fff;
+}
+
+.bg-secondary-color {
+    background-color: #ece8ea;
+}
+
+.bg-dark-color {
+    background-color: #050505;
+}
+
+.primary-color {
+    color: #050505;
+}
+
+.secondary-color {
+    color: #7a7a7a;
+}
+
+/* NAVBAR */
+#navbar {
+    border-bottom: 1px solid #7a7a7a;
+    padding: 1em; /* Adiciona padding para espaçamento */
+}
+
+#navbar a:hover {
+    color: #7a7a7a;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid #050505;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Centraliza o logo verticalmente */
+}
+
+.navbar-brand img {
+    width: 50px;
+    margin-right: 0.5em;
+}
+
+.navbar-brand span {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+#navbar-items .navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#navbar-items .nav-item {
+    margin: 0 1em;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 50px;
+        margin-right: 0.3em;
+    }
+
+    .navbar-brand span {
+        font-size: 1em;
+    }
+
+    #navbar {
+        padding: 0.3em 0.5em;
+    }
+
+    .navbar-toggler {
+        padding: 0.2em 0.5em;
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        font-size: 1.2em;
+    }
+}
+
+
+/* SLIDER */
+#slider {
+    margin-top: 8em;
+    margin-bottom: 1em;
+}
+
+#slider .carousel-caption {
+    bottom: 3em;
+    padding: 0 1em; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#slider .carousel-caption h5 {
+    font-size: 2.5em;
+    text-shadow: #000 2px 2px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+#slider .btn {
+    padding: 0.3em 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #111;
+    font-size: 3em;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #222;
+    opacity: 0.8;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+@media (min-width: 768px) {
+    #slider .carousel-caption {
+        bottom: 15em;
+    }
+
+    #slider .carousel-caption h5 {
+        font-size: 4em;
+        text-shadow: #000 2px 3px;
+    }
+
+    #slider .btn {
+        padding: 0.6em 1.6em;
+        font-size: 1.2em;
+    }
+
+    .carousel-indicators {
+        bottom: 7em;
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 576px) {
+    #slider .carousel-caption {
+        padding: 0 1em; /* Adicionado para mais espaço lateral */
+        display: flex; /* Flexbox adicionado para centralizar conteúdo */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #slider .carousel-caption h5 {
+        font-size: 2em; /* Tamanho da fonte reduzido para melhor ajuste */
+        text-align: center; /* Centralizado para melhor aparência */
+    }
+
+    #slider .carousel-caption p {
+        font-size: 1.2em; /* Se houver um parágrafo, ajuste o tamanho */
+        text-align: center; /* Centraliza o texto do parágrafo */
+    }
+
+    /* Adiciona padding lateral para evitar que o texto fique colado nas bordas */
+    #slider .carousel-caption {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* MINI BANNERS */
+#mini-banners {
+    margin-bottom: 4em;
+}
+
+#mini-banners .card {
+    padding: 2em 0.3em;
+    border-radius: 0;
+}
+
+#mini-banners i {
+    font-size: 4em;
+}
+
+#mini-banners .card-title {
+    margin-bottom: 1.5em;
+}
+
+#mini-banners .btn {
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+}
+
+#mini-banners .card {
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    #mini-banners {
+        margin-top: -6em;
+    }
+}
+
+/* DESTAQUES */
+#featured-container {
+    margin-bottom: 4em;
+}
+
+.title {
+    font-size: 1.75em;
+    margin-bottom: 0.4em;
+    position: relative;
+}
+
+.title:before {
+    width: 75px;
+    border-top: 4px solid #7a7a7a;
+    content: "";
+    position: absolute;
+    bottom: 2em;
+}
+
+#featured-images {
+    margin-top: 2em;
+}
+
+#featured-images .col-md-4 {
+    position: relative;
+    cursor: pointer;
+}
+
+#featured-images .col-md-4:hover > .banner-content {
+    opacity: 0.8;
+}
+
+#featured-images .banner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+#featured-container .btn {
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 2.4em;
+    }
+
+    .title:before {
+        bottom: 1.5em;
+    }
+
+    #featured-images .banner-content {
+        opacity: 0;
+    }
+}
+
+/* INFO */
+#info-content {
+    margin-bottom: 4em;
+    padding: 4em 1em;
+}
+
+#info-numbers {
+    margin: 1.5em 0;
+}
+
+#info-banner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+}
+
+#info-numbers h3 {
+    font-size: 3em;
+}
+
+@media (min-width: 768px) {
+    #info-content {
+        padding: 3.5em;
+    }
+}
+
+/* FOOTER TOP */
+#footer {
+    padding: 2em 3em;
+}
+
+#footer-top {
+    margin-bottom: 2em;
+}
+
+#footer-top,
+#footer-top i {
+    color: #fff;
+}
+
+#social-icons {
+    text-align: right;
+}
+
+#social-icons i {
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#social-icons i:hover {
+    color: #7a7a7a;
+}
+
+/* FOOTER DETAILS */
+#footer-details {
+    margin-bottom: 3em;
+}
+
+#news-container,
+#contact-container,
+#links-container {
+    padding: 0;
+    border: 0;
+    margin-bottom: 2em;
+}
+
+#footer-details h4 {
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+
+#news-container input {
+    border-radius: 0;
+    border: none;
+}
+
+#links-container li {
+    bottom: 0.5em;
+}
+
+#links-container a {
+    text-decoration: none;
+}
+
+#links-container a:hover {
+    color: #fff;
+}
+
+/* FOOTER BOTTOM */
+#footer-bottom {
+    border-top: 1px solid #7a7a7a;
+    padding-top: 2em;
+}
+
+#footer-bottom i {
+    color: #e61e10;
+}
+
+@media (min-width: 768px) {
+    #news-container {
+        padding-right: 2em;
+    }
+
+    #contact-container {
+        padding: 0 2em;
+        border-left: 1px solid #7a7a7a;
+        border-right: 1px solid #7a7a7a;
+    }
+
+    #links-container {
+        padding-left: 2em;
+    }
+}
+
+#email {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.placeholder-hidden {
+    opacity: 0;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 576px) {
+    #info-content {
+        padding: 2em 0.5em;
+    }
+
+    #info-numbers h3 {
+        font-size: 2.5em;
+    }
+
+    #info-numbers {
+        text-align: center;
+    }
+
+    #info-banner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #info-banner img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    #mini-banners .card {
+        padding: 1.5em 0.3em;
+    }
+}
+
+.profile-card {
+    text-align: center;
+    padding: 15px;
+}
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+.profile-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+.profile-card p {
+    font-size: 1em;
+    color: #666;
+}
