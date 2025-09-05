@@ -91,6 +91,7 @@
       "properties": {
         "name": "China",
         "type": "Clique aqui para acessar mapas interativos da China.",
+        "countryPage": "china.html",
         "location": "A China é o terceiro maior país do mundo, localizada no leste da Ásia, com paisagens que variam desde os desertos no oeste até planícies férteis e regiões montanhosas no leste e sul.",
         "facts": "A China possui uma das civilizações mais antigas do mundo, com contribuições marcantes para a filosofia, ciência e artes. No século XX, tornou-se a República Popular da China após a Revolução Comunista, e desde então é uma potência influente. Com rápido crescimento econômico nas últimas décadas, a China possui grande relevância econômica e política global, além de um vasto patrimônio cultural.",
         "imageCaption": "A Cidade Proibida em Pequim.",
