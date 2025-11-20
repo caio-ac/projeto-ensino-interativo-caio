@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mapa Interativo da URSS</title>
+  <title>Mapa Interativo do Brasil</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -17,10 +17,6 @@
       padding: 2px 6px;
     }
 
-    .marker[data-year="1945"] .marker-title,
-    .marker[data-year="1945"] .marker-subtitle {
-      white-space: nowrap;
-    }
   </style>
 </head>
 
@@ -51,7 +47,7 @@
 
 
 
-  <svg width="1800mm" height="1362.517mm" viewBox="0 0 210 332.99342" version="1.1" id="svg1" xml:space="preserve"
+  <svg width="1800mm" height="1363.517mm" viewBox="0 0 210 332.99342" version="1.1" id="svg1" xml:space="preserve"
     sodipodi:docname="tratadoDeMadri.svg" inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +113,26 @@
     </g>
   </svg>
 
+  <div class="map-overlay2" style="width: 290px;">
+          <div class="legend" style="width: 490px;">
+            <h5>Legenda da linha do tempo</h5>
+            <!-- Época onde os -->
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #b71c1c; width: 20px; height: 20px; "></div>
+              <span>Brasil Colonial (1530 a 1822) </span>
+            </div>
 
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #FFD700; width: 20px; height: 20px; "></div>
+              <span>Brasil Imperial (1822 a 1889) </span>
+            </div>
+
+            <div class="legend-item">
+              <div class="legend-color" style="background-color: #006400; width: 20px; height: 20px; "></div>
+              <span>Brasil República (1889 - Atual) </span>
+            </div>
+          </div>
+  </div>
 
   <div id="map">
     <div class="map-overlay">
@@ -581,7 +596,7 @@
             slider.value = initialPosition;
 
             const backgroundValue = (initialPosition / 100) * 100;
-            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 40%, #FFD700 40%, #FFD700 60%, #006400 60%, #006400 100%)`;
+            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 40%, #FFD700 40%, #FFD700 55%, #006400 55%, #006400 100%)`;
           }
         }
 

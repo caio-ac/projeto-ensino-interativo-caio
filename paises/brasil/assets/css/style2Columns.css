@@ -257,6 +257,18 @@ svg {
   border-radius: 10px;
 }
 
+.map-overlay2 {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  width: 260px;
+  height: 205px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
 .map-overlay h5 {
   font-size: 20px;
   margin-bottom: 12px;
