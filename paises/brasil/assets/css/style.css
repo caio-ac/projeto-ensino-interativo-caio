@@ -248,6 +248,16 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+.map-overlay2 {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  width: 260px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
 .map-overlay h5 {
   font-size: 20px;
@@ -327,4 +337,8 @@
 @keyframes saoVicente2Destaque {
   0% {fill: #c6dfedff;}
   100% {fill: rgb(9, 24, 32);}
+}
+@keyframes distritoFederalDestaque {
+  0% {fill: #1E90FF;}
+  100% {fill:#104E8B;}
 }
