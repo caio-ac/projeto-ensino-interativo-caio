@@ -313,4 +313,132 @@
   padding: 20px; /* espaçamento interno */
 }
 
+* {
+  box-sizing: border-box;
+}
 
+@media (max-width: 768px) {
+
+  body {
+    margin: 10px;
+    padding-top: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  .map-overlay {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .legend-item {
+    font-size: 13px;
+  }
+
+  .legend-color {
+    width: 20px;
+    height: 20px;
+  }
+
+  .marker {
+    max-width: 90px;
+    font-size: 12px;
+  }
+
+  .marker-title {
+    font-size: 14px;
+  }
+
+  .marker-subtitle {
+    font-size: 11px;
+  }
+
+  #tooltip {
+    max-width: 90vw;
+    max-height: 40vh;
+    font-size: 13px;
+  }
+
+  .tooltip-title {
+    font-size: 16px;
+  }
+
+  .tooltip-text {
+    font-size: 13px;
+  }
+
+  .tooltip-image {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .slider {
+    height: 8px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  .settings-icon {
+    font-size: 24px;
+    left: 10px;
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    max-width: 95%;
+  }
+
+  .modal-flag {
+    width: 30px;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  svg {
+    width: 80%;
+  }
+
+  .map-overlay {
+    width: 220px;
+    top: 140px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  .marker {
+    max-width: 110px;
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  svg {
+    width: 45%;
+  }
+
+  .map-overlay {
+    right: 40px;
+  }
+}

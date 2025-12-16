@@ -156,3 +156,109 @@ p.info {
 .esri-attribution__sources a {
   color: #323232;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+
+  #introDiv {
+    max-width: 90%;
+    padding: 2em;
+    min-height: auto;
+  }
+
+  #introDiv h1 {
+    font-size: 1.6em;
+  }
+
+  #introDiv p {
+    font-size: 1em;
+  }
+
+  #start-globe {
+    font-size: 0.95em;
+    padding: 0.7em 1.2em;
+  }
+
+  #viewDiv {
+    filter: blur(8px);
+  }
+
+  .popupDescription {
+    padding: 1.5em;
+  }
+
+  .popupImageCaption {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 576px) {
+
+  html, body {
+    overflow: auto; /* evita travamento no mobile */
+  }
+
+  #container {
+    padding: 0.5em;
+    align-items: flex-start;
+  }
+
+  #introDiv {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  }
+
+  #introDiv h1 {
+    font-size: 1.4em;
+  }
+
+  #introDiv p {
+    font-size: 0.95em;
+    line-height: 1.4em;
+  }
+
+  button.esri-icon-close {
+    top: 1em;
+    right: 1em;
+    font-size: 1.2em;
+  }
+
+  #start-globe {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.8em;
+  }
+
+  #viewDiv {
+    filter: blur(6px);
+  }
+
+  /* Popups do mapa */
+  .esri-popup__header-title {
+    font-size: 16px;
+  }
+
+  .popupDescription {
+    padding: 1em;
+  }
+
+  .popupImage {
+    max-height: 180px;
+  }
+
+  .popupCredits {
+    font-size: 0.75em;
+    padding: 0 1em 0.5em;
+  }
+}
+

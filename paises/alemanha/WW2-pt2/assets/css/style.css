@@ -281,3 +281,171 @@
 .marker[data-year="1945"] .marker-subtitle {
     white-space: nowrap;
 }
+
+
+@media (max-width: 992px) {
+
+  body {
+    overflow: auto;
+    padding-top: 10px;
+  }
+
+  svg {
+    width: 85%;
+  }
+
+  #map {
+    height: auto;
+    padding: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .map-overlay {
+    position: static;
+    width: 100%;
+    max-width: 420px;
+    margin: 20px auto 0;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .marker {
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .marker-title {
+    font-size: 14px;
+  }
+
+  .marker-subtitle {
+    font-size: 11px;
+  }
+
+  #tooltip {
+    max-width: 45vw;
+    max-height: 40vh;
+    font-size: 13px;
+  }
+
+  .tooltip-title {
+    font-size: 16px;
+  }
+
+  .tooltip-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  svg {
+    width: 100%;
+  }
+
+  #map {
+    padding: 10px;
+  }
+
+  .map-overlay {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .map-overlay h5 {
+    font-size: 18px;
+  }
+
+  .map-overlay p {
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h5 {
+    font-size: 16px;
+  }
+
+  .legend-item {
+    font-size: 12px;
+  }
+
+  .legend-color {
+    width: 18px;
+    height: 18px;
+  }
+
+  .legend-item span {
+    font-size: 11px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .modal-flag {
+    width: 30px;
+    margin-right: 0;
+  }
+
+  .modal-image {
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  .additional-info-box {
+    padding: 12px;
+  }
+
+  .marker {
+    font-size: 11px;
+    max-width: 90px;
+    top: 15px;
+  }
+
+  .marker-title {
+    font-size: 13px;
+  }
+
+  .marker-subtitle {
+    font-size: 10px;
+  }
+
+  #tooltip {
+    max-width: 90vw;
+    max-height: 45vh;
+    font-size: 13px;
+  }
+
+  .tooltip-image {
+    max-width: 90px;
+    max-height: 90px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-image,
+.tooltip-image {
+  border-radius: 6px;
+}
+
+.map-overlay,
+.card {
+  box-sizing: border-box;
+}

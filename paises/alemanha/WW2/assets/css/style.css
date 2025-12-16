@@ -318,3 +318,152 @@
     padding: 20px; /* Adiciona espaçamento interno para evitar que o conteúdo fique muito próximo das bordas */
   }
 
+
+
+@media (max-width: 992px) {
+
+  body {
+    overflow: auto;
+    padding-top: 10px;
+  }
+
+  svg {
+    width: 90%;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .map-overlay {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    max-width: 95%;
+  }
+
+  .marker {
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .marker-title {
+    font-size: 14px;
+  }
+
+  .marker-subtitle {
+    font-size: 11px;
+  }
+
+  #tooltip {
+    max-width: 40vw;
+    max-height: 40vh;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  svg {
+    width: 100%;
+  }
+
+  #map {
+    height: auto;
+    padding: 10px;
+  }
+
+  .map-overlay {
+    padding: 15px;
+  }
+
+  .map-overlay h5 {
+    font-size: 18px;
+  }
+
+  .map-overlay p {
+    font-size: 13px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h5 {
+    font-size: 16px;
+  }
+
+  .legend-item {
+    font-size: 12px;
+  }
+
+  .legend-color {
+    width: 18px;
+    height: 18px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .modal-flag {
+    width: 30px;
+  }
+
+  .modal-image {
+    max-height: 250px;
+    object-fit: contain;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  #tooltip {
+    font-size: 13px;
+    max-width: 90vw;
+    max-height: 50vh;
+  }
+
+  .tooltip-title {
+    font-size: 16px;
+  }
+
+  .tooltip-text {
+    font-size: 14px;
+  }
+
+  .settings-icon {
+    font-size: 26px;
+    left: 10px;
+  }
+
+  .tutorial-text {
+    font-size: 0.9rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-image,
+.tooltip-image {
+  border-radius: 6px;
+}
+
+
+

@@ -456,3 +456,127 @@
     font-size: 1em;
     color: #666;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container,
+.container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*NAVBAR*/
+@media (max-width: 768px) {
+    #navbar {
+        padding: 0.5em 0.8em;
+    }
+
+    #navbar-items .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar-items .nav-item {
+        margin: 0.5em 0;
+    }
+}
+
+/*SLIDER*/
+@media (max-width: 768px) {
+    #slider {
+        margin-top: 6em;
+    }
+
+    #slider .carousel-caption h5 {
+        font-size: 1.8em;
+    }
+
+    #slider .btn {
+        font-size: 0.9em;
+    }
+}
+
+/*MINI BANNERS*/
+@media (max-width: 768px) {
+    #mini-banners {
+        margin-top: 0;
+    }
+
+    #mini-banners .card {
+        padding: 1.2em;
+    }
+
+    #mini-banners i {
+        font-size: 3em;
+    }
+}
+
+/*DESTAQUES*/
+@media (max-width: 768px) {
+    #featured-images .col-md-4 {
+        margin-bottom: 1em;
+    }
+
+    #featured-images .banner-content {
+        opacity: 1;
+        position: relative;
+        padding: 1em;
+    }
+}
+
+/*INFO SECTION*/
+@media (max-width: 768px) {
+    #info-content {
+        padding: 2em 1em;
+        text-align: center;
+    }
+
+    #info-numbers h3 {
+        font-size: 2.2em;
+    }
+
+    #info-banner {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+/*FOOTER*/
+@media (max-width: 768px) {
+    #footer {
+        padding: 2em 1.5em;
+    }
+
+    #social-icons {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    #footer-details {
+        text-align: center;
+    }
+
+    #contact-container {
+        border: none;
+        padding: 1em 0;
+    }
+}
+
+/*PROFILE CARDS*/
+@media (max-width: 576px) {
+    .profile-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-card h3 {
+        font-size: 1.1em;
+    }
+
+    .profile-card p {
+        font-size: 0.95em;
+    }
+}
