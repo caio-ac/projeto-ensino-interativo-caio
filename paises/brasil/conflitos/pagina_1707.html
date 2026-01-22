@@ -23,18 +23,18 @@
 <body>
   <div class="container">
 
-    <a href="/paises/brasil.html" class="botao btn btn-primary">Voltar</a>
+    <a href="../mudancasTerritoriais/pagina_1988.html" class="botao btn btn-primary">Voltar</a>
 
     <div style="width: 5px;"></div>
 
-    <a href="pagina_1534.html" class="botao btn btn-primary"><i class="fas fa-backward"></i></a>
+    <a href="pagina_1707.html" class="botao btn btn-primary"><i class="fas fa-backward"></i></a>
 
     <div class="slidecontainer">
       <input type="range" min="0" max="100" value="0" class="slider" id="myRange" />
       <div id="markers"></div>
     </div>
 
-    <a href="pagina_1822.html" class="botao btn btn-primary"><i class="fas fa-forward"></i></a>
+    <a href="pagina_1789.html" class="botao btn btn-primary"><i class="fas fa-forward"></i></a>
 
     <div style="width: 5px;"></div>
 
@@ -47,16 +47,7 @@
 
 
 
-  <svg width="1800mm" height="1363.517mm" viewBox="0 0 210 311.48264" version="1.1" id="svg1" xml:space="preserve"
-    sodipodi:docname="Emboabas.svg" inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
-    xmlns:svg="http://www.w3.org/2000/svg">
-    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
-      inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1"
-      inkscape:document-units="mm" inkscape:zoom="0.125" inkscape:cx="964" inkscape:cy="3476" inkscape:window-width="1920"
-      inkscape:window-height="1111" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:window-maximized="1"
-      inkscape:current-layer="layer1" />
+  <svg width="1800mm" height="1363.517mm" viewBox="0 0 210 311.48264" version="1.1" id="svg1" xml:space="preserve">
     <defs id="defs1">
       <clipPath id="clip-shape" clipPathUnits="userSpaceOnUse">
         <!-- a mesma forma é usada para cortar o conteúdo -->
@@ -66,7 +57,7 @@
       </clipPath>
     </defs>
     <g inkscape:label="Mapa" id="layer1" 
-        inkscape:groupmode="layer" style="display:inline" onmousemove="showTooltip(event, '1889-Atual', 'https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Brazil_%281889%E2%80%931960%29.svg', 'Brasil República', this, '#ff0000');"
+        inkscape:groupmode="layer" style="display:inline" onmousemove="showTooltip(event, '1707-1709', '../assets/bandeiras/Flag_of_the_Princes_of_Brazil.svg.png', 'Brasil Colonial', this, '#ff0000');"
         onmouseout="hideTooltip();" onmouseleave="originalColor(this);" onclick="openModal('brasil');"
         
         >
@@ -131,7 +122,7 @@
   <div class="map-overlay2" style="width: 290px;">
           <div class="legend" style="width: 490px;">
             <h5>Legenda da linha do tempo</h5>
-            <!-- Época onde os -->
+            <!-- Época do slider -->
             <div class="legend-item">
               <div class="legend-color" style="background-color: #b71c1c; width: 20px; height: 20px; "></div>
               <span>Brasil Colonial (1530 a 1822) </span>
@@ -310,14 +301,14 @@
         const countryData = {
           brasil: {
             title: "Brasil",
-            imageURL: "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg",
+            imageURL: "../assets/bandeiras/Flag_of_Brazil.svg.png",
             description: "A Guerra dos Emboabas foi um conflito ocorrido entre 1707 e 1709 pelo direito de exploração das recém-descobertas jazidas de ouro na região das minas da então capitania de São Vicente ou da capitania de Itanhaém, correspondente a parte do atual estado de Minas Gerais, no Brasil.",
             description2: "O confronto opôs, de um lado, os bandeirantes — responsáveis pelas primeiras descobertas auríferas e que, por isso, reivindicavam prioridade ou exclusividade na exploração — e, de outro, um grupo heterogêneo de forasteiros vindos de outras capitanias e do reino. A maioria desses mineradores era da região nordeste, onde a presença portuguesa era maior. Contudo, aquela região era parte da Capitania de São Vicente, dominada pelos bandeirantes paulistas, os quais não desejavam dividir o ouro.",
             description3: "Além disso, os comerciantes desejavam o monopólio do comércio de gêneros para o abastecimento dos arraiais, com destaque para o fornecimento de animais para o abate e o consumo. Portanto, o monopólio na exploração das minas de ouro, bem como na comercialização de gêneros de primeira ordem, foram as principais causas do conflito.",
             description4: "A Guerra dos Emboabas consolidou-se como um dos primeiros grandes conflitos internos do Brasil, evidenciando tensões entre diferentes grupos de colonos e inaugurando um padrão de disputas em torno do controle das riquezas minerais recém-descobertas. ",
             additionalInfo: "O conflito aparece representado em obras literárias, televisivas e historiográficas que exploram a formação das Minas Gerais e as tensões coloniais. A narrativa ficcional mais conhecida é o romance A Muralha (1954), de Diná Silveira de Queirós, que dramatiza a expansão bandeirante e a violência dos confrontos entre paulistas e forasteiros no contexto da descoberta do ouro.",
-            image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Guerra_dos_Emboabas.jpg?20060507030536",
-            imageCaption: ".",
+            image: "./assets/images/pagina_1707/Guerra_dos_Emboabas.jpg",
+            imageCaption: "Ex-voto representando a trajetória de Agostinho Pereira da Silva, desde sua saída de Portugal, passando por conflitos ligados à Guerra dos Emboabas, até receber as ordens sacras na Bahia",
             sources: [
               {
                 name: "Guerra dos Emboabas - Wikipédia",
@@ -490,8 +481,8 @@
 
         const events = [
           { year: 1707, label: "Guerra dos Emboabas" },
-          { year: 1750, label: "Tratado de Madri" },
-          { year: 1822, label: "Independência do Brasil" },
+          { year: 1789, label: "Inconfidência Mineira" },
+          { year: 1825, label: "Guerra da Cisplatina" },
           { year: 1903, label: "Tratado de Petrópolis" },
           { year: 1960, label: "Criação de Brasília" },
           { year: 1988, label: "Constituição atual" },
