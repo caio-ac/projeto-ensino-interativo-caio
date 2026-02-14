@@ -63,12 +63,14 @@
    justify-content: space-between;
    width: 100%;
    max-width: 1200px;
-   padding: 0 0px;
+   padding: 0 15px;
    margin-top: 40px;
+   flex-wrap: wrap;
+   gap: 10px;
  }
 
  .botao {
-   padding: 2px 6px;
+   padding: 8px 12px;
    font-size: 10px;
    background-color: #007bff;
    color: white;
@@ -77,6 +79,10 @@
    cursor: pointer;
    text-decoration: none;
    transition: background-color 0.3s ease;
+   min-height: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
  }
 
  .botao:hover {
@@ -175,17 +181,12 @@
  }
 
  svg {
-   width: 59%;
+   width: 39%;
    height: auto;
    margin: 0 auto;
    display: block;
  }
- #botoes{
-  display: flex;
-  justify-content: space-between;
-  width: 130px;                   
-  margin-top: 10px;
- }
+
 
 
 .card {
@@ -379,25 +380,11 @@
   .p3 { animation-delay: .8s; }
   .p4 { animation-delay: .16s; }
 
-  /* forma de fundo só para visual */
-  .shape { fill: #0f1724; stroke: #123; stroke-width: 2; }
+/* forma de fundo só para visual */
+.shape { fill: #0f1724; stroke: #123; stroke-width: 2; }
 
 
-#mapWrapper {
-  position: relative;
-  width: 1090px;
-  height: 700px;
-  aspect-ratio: 210 / 311;
-  overflow: hidden;
-}
 
-svg.map {
-  position: absolute !important;
-  inset: 0;
-  display: block !important;
-  opacity: 0;
-  pointer-events: none;
-}
 
 svg.map.active {
   opacity: 1;
@@ -425,12 +412,298 @@ svg.map.active {
   stroke-dashoffset: 800;
   opacity: 0;
 }
+/* Responsividade para diferentes tamanhos de tela */
 
-#botoes {
-  display: flex !important;
-  flex-direction: row !important; 
-  justify-content: center; 
-  align-items: center;
-  gap: 10px;
-  width: 100%;
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+
+  .slidecontainer {
+    margin: 20px 0;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .botao {
+    padding: 10px 16px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  svg {
+    width: 100%;
+  }
+  .map-overlay2 {
+    order: -1;
+  }
+
+  .map-overlay,
+  .map-overlay2 {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .marker {
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .marker-title {
+    font-size: 14px;
+  }
+
+  .marker-subtitle {
+    font-size: 11px;
+  }
+
+  #tooltip {
+    max-width: 85vw;
+    max-height: 60vh;
+    font-size: 13px;
+  }
+
+  .tooltip-title {
+    font-size: 16px;
+  }
+
+  .tooltip-text {
+    font-size: 13px;
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    max-width: 95%;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+
+  .modal-image {
+    max-height: 300px;
+  }
+
+  .legend-item {
+    font-size: 13px;
+  }
+
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .settings-icon {
+    top: 15px;
+    left: 10px;
+    font-size: 26px;
+  }
+
+  .tutorial-gif {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  .tutorial-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 15px;
+  
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0 38px;
+    margin-top: 15px;
+  }
+
+  .botao {
+    padding: 1px 7px;
+    font-size: 13px;
+    width: 95%;
+    min-height: 36px;
+  }
+
+  .slidecontainer {
+    margin: 65px 0;
+  }
+
+  .slider {
+    height: 10px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .card h5 {
+    font-size: 16px;
+  }
+
+  .card .btn-primary {
+    padding: 10px;
+    min-height: 40px;
+    font-size: 14px;
+  }
+
+  .map-overlay2 {
+    order: -1;
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  .map-overlay,
+  .map-overlay2 {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+
+  .map-overlay h5,
+  .map-overlay2 h5 {
+    font-size: 18px;
+  }
+
+  .map-overlay p,
+  .map-overlay2 p {
+    font-size: 13px;
+  }
+
+  .marker {
+    font-size: 11px;
+    max-width: 80px;
+  }
+
+  .marker-title {
+    font-size: 12px;
+  }
+
+  .marker-subtitle {
+    font-size: 10px;
+  }
+
+  #tooltip {
+    max-width: 90vw;
+    max-height: 70vh;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .tooltip-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .tooltip-title {
+    font-size: 14px;
+  }
+
+  .tooltip-text {
+    font-size: 12px;
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    max-width: 98%;
+    margin: 5px;
+  }
+
+  .modal-content {
+    padding: 12px;
+  }
+
+  .modal-image {
+    max-height: 250px;
+  }
+
+  .modal-flag {
+    width: 35px;
+  }
+
+  .modal-square {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    margin-right: 10px;
+  }
+
+  .modal-category {
+    margin-bottom: 12px;
+  }
+
+  .legend-item {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .legend-color {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+  }
+
+  .settings-icon {
+    top: 12px;
+    left: 8px;
+    font-size: 24px;
+  }
+
+  .tutorial-gif {
+    max-width: 100%;
+  }
+
+  .tutorial-text {
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+
+  .additional-info-box {
+    margin-top: 15px;
+    padding: 12px;
+  }
+
+  .additional-info-box h6 {
+    font-size: 13px;
+  }
+
+  .modal-sources {
+    font-size: 12px;
+  }
 }
