@@ -84,12 +84,6 @@ function showTooltip(evt, title, imageURL, description, area, color) {
 
       const events = [
         { year: 1914, label: "Início da Primeira Guerra Mundial" },
-        { year: 1917, label: "Revolução Russa", markerOnly: true },
-        {
-          year: 1918,
-          label: "Fim da Primeira Guerra Mundial",
-          markerOnly: true,
-        },
         { year: 1919, label: "Período pós-Guerra" },
         { year: 1921, label: "Guerra Civil Russa" },
         { year: 1922, label: "Formação da URSS" },
