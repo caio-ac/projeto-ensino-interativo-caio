@@ -29,12 +29,6 @@
       pointer-events: none;
     }
 
-    .map-container {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
     .map {
       transition: opacity 1s ease-in-out;
       opacity: 1;
@@ -57,6 +51,99 @@
     .map.fade-in {
       opacity: 1;
     }
+
+    .svg-map-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .map-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .map-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .map-btn:hover:not(:disabled) {
+      background-color: #007bff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .map-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .map-btn.active {
+      background-color: #764ba2;
+      box-shadow: 0 4px 12px rgba(118, 75, 162, 0.4);
+    }
+
+    .map-timeline {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .timeline-item {
+      padding: 8px 12px;
+      background-color: #f0f0f0;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      background-color: #e0e0e0;
+      border-color: #007bff;
+    }
+
+    .timeline-item.active {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+
+    .map-info {
+      text-align: center;
+      margin: 15px 0;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      border-left: 4px solid #007bff;
+    }
+
+    .map-info h3 {
+      margin: 0 0 10px 0;
+      color: #667eea;
+    }
+
+    .map-info p {
+      margin: 5px 0;
+      color: #666;
+      font-size: 14px;
+    }
   </style>
 </head>
 
@@ -67,7 +154,7 @@
 
     <div style="width: 5px;"></div>
 
-    <a href="pagina_1707.html" class="botao btn btn-primary"><i class="fas fa-backward"></i></a>
+    <a href="pagina_1817.html" class="botao btn btn-primary"><i class="fas fa-backward"></i></a>
 
     <div class="slidecontainer">
       <input type="range" min="0" max="100" value="0" class="slider" id="myRange" />
@@ -87,12 +174,17 @@
 
   <div id="mapWrapper">
 
-
-    <svg width="1395.6187mm" height="1462.0667mm" viewBox="0 0 162.82217 311.38682" version="1.1" id="mapa-com" class="map active">
-      <defs id="defs1" />
+    <svg width="1395.6187mm" height="1462.0667mm" viewBox="0 0 162.82217 311.38682" version="1.1" id="mapa-com"
+      class="map active">
+      <defs id="defs1">
+        <pattern id="imgPattern1" patternUnits="objectBoundingBox" width="1" height="1">
+          <image href="../mudancasTerritoriais/assets/images/pagina_1822_pt2/Flag_of_the_Provincia_Cisplatina.svg.png"
+            x="-18" y="-41" width="45%" height="40%" />
+        </pattern>
+      </defs>
       <g inkscape:label="Mapa" id="layer1" inkscape:groupmode="layer" style="display:inline"
         transform="translate(-14.43417,-12.19049)"
-        onmousemove="showTooltip(event, '1822-1889', 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Brazil_%281853-1889%29.svg', 'Império Do Brasil', this, 'green');"
+        onmousemove="showTooltip(event, '1822-1889', '../assets/bandeiras/Flag_of_Brazil_(1853_1889).svg.png', 'Império Do Brasil', this, 'blue');"
         onmouseout="hideTooltip();" onmouseleave="originalColor(this);" onclick="openModal('brasil_antes');">
         <path id="path1"
           style="display:inline;opacity:1;fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.275166;stroke-dasharray:none;stroke-opacity:1"
@@ -129,11 +221,7 @@
           inkscape:label="espiritoSanto"
           d="m 201.87263,191.35562 -1.04247,-0.0282 -0.84526,-0.50715 -0.81708,0.25358 -0.2254,0.59167 0.59168,1.09883 -0.59168,0.70438 -0.36627,0.64803 0.76072,0.87343 -0.39445,0.9016 c 0,0 -0.81707,-0.14088 -0.84525,-0.36628 -0.0282,-0.2254 -1.18335,-0.36627 -1.18335,-0.36627 l -0.59168,-0.76073 -0.81708,-0.3381 -0.0282,1.49328 1.15517,1.15518 0.14088,0.64802 -1.49328,0.28176 -0.81708,0.16905 c 0,0 -0.25357,0.30992 -0.0564,0.4508 0.19723,0.14087 1.60598,0.47897 1.60598,0.47897 l -0.39445,0.59168 0.14088,0.70438 0.61985,1.04248 v 0.47897 l -0.16905,0.81708 -0.2254,0.67621 -0.5635,0.3381 -0.67621,0.42262 -0.50715,0.84526 c 0,0 0.0564,0.61985 0.0564,0.81707 0,0.19723 -0.0282,0.67621 -0.0282,0.67621 l -0.59168,0.4508 c 0,0 -0.25358,0.16905 -0.25358,0.28175 0,0.1127 -0.16905,0.6762 -0.16905,0.87343 0,0.19722 -0.1127,0.64803 -0.1127,0.64803 0,0 -0.2254,0.61985 -0.4508,0.59167 -0.2254,-0.0282 -0.98613,-0.4508 -1.127,-0.50715 -0.14088,-0.0563 -0.90161,-0.2254 -0.90161,-0.2254 0,0 -0.6762,0.39445 -0.6762,0.5635 0,0.16905 -0.25358,0.7889 -0.25358,0.7889 l 0.19723,0.73256 0.1127,0.42262 -0.39445,0.33811 -0.25358,0.19722 v 0.92978 c 0,0 0.47804,0.82115 0.6175,0.82115 h 0.29884 l 0.17931,0.73714 v 1.01607 c 0,0 0.59768,0.47814 0.71722,0.57776 0.11953,0.0996 0.49807,0.1793 0.85668,0.31876 0.35861,0.13946 1.45436,0.37854 1.5739,0.37854 h 0.55784 c 0.37853,0 1.15552,0.0398 1.15552,0.0398 l 0.93637,0.45823 0.35861,0.33869 0.15152,0.087 0.63577,-0.71993 0.29293,-0.58541 v -0.2927 l 0.84624,-1.07327 0.58586,-0.8456 0.55331,-0.42279 0.48821,-0.29271 0.35804,-0.0651 0.29293,-0.61794 0.26038,-0.48784 0.45567,-1.07326 0.0326,-0.52037 0.42312,-0.2927 0.45566,-0.29271 c 0,0 0.13019,-0.52037 0.19529,-0.65046 0.065,-0.13009 0.0976,-0.8456 0.0976,-0.8456 l 0.0326,-0.65046 0.58586,-0.74803 0.5533,-0.52036 0.16275,-0.39028 0.65095,-0.45532 0.39058,-0.39027 0.52076,-0.68299 0.42311,-0.35776 0.19529,-0.45531 0.0325,-2.69942 -0.13019,-0.48784 -0.32547,-0.4228 -0.19529,-0.7155 v -0.8456 l 0.48821,-1.33345 0.16274,-0.19514 0.16274,-0.94317 0.0747,-0.96545 -4.69123,-3.41633"
           sodipodi:nodetypes="sscsccccccccccccccccccccccccccccccccccccccccccscccsssscccccccccccccsccccccccsccccccccccsccssc" />
-        <path id="cisplatina"
-          style="display:inline;fill:red;fill-opacity:1;stroke:#ff0000;stroke-width:0.29646421;stroke-dasharray:none;stroke-opacity:1"
-          d="m 70.409737,286.78328 -1.825376,2.09853 0.521143,2.35417 -1.835077,5.01899 0.396616,0.83491 -0.523804,1.77999 -0.887092,0.53155 0.378176,1.17879 -0.354175,1.1069 0.891803,0.96589 -0.965539,0.66844 0.403062,5.25225 c -0.687426,-0.20641 -1.428928,-0.72376 -1.915509,0.22469 -0.18694,0.80817 -0.184643,1.47872 0.211137,1.86309 -0.442452,2.28006 -0.04446,3.15943 -0.05356,4.71719 1.563099,1.2345 3.715765,2.20697 4.425583,3.82071 l 3.836566,-0.15999 5.851898,2.75012 0.755997,-0.0127 c 0.747894,0.88038 1.569714,1.66776 3.931994,0.51715 l 4.162905,-0.0254 0.46836,0.64408 1.34812,-0.44757 1.29047,0.88636 6.05134,-2.78084 1.30069,-0.63008 0.79432,-0.5319 0.0839,-0.49265 0.60977,-0.15437 0.365865,-0.73297 v -0.4508 l 0.19722,-0.5635 0.28175,-0.59168 -0.11105,-0.96147 0.008,-1.0893 c 0,0 0.19922,-0.47815 0.19922,-0.59769 v -1.35474 l 0.49808,-0.72719 -0.55784,-1.17545 0.13945,-0.78694 c 0,0 0.51803,-0.47811 0.58773,-0.48811 0.0697,-0.01 1.01606,-0.17931 1.01606,-0.17931 l 0.6973,-0.55784 0.27892,-0.57776 c 0,0 -0.0299,-0.69807 -0.0199,-0.75707 l 0.0564,-0.33585 0.84849,-0.33104 0.0845,-0.4508 -0.35219,-0.59168 -0.32401,-0.16905 -1.01431,-0.35219 c 0,0 -0.9016,-0.59167 -1.00021,-0.69029 -0.0986,-0.0986 -1.01431,-0.6762 -1.11292,-0.87343 -0.0986,-0.19722 -0.15496,-0.69029 -0.19722,-0.94386 -0.0423,-0.25358 -0.16905,-0.4508 -0.338105,-0.74664 -0.169051,-0.29584 -0.394452,-0.76073 -0.394452,-0.76073 l -0.662115,-0.35219 -0.591677,-0.59168 -0.986129,-0.47897 c 0,0 -0.309926,-0.0986 -0.394451,-0.0563 -0.08452,0.0423 -0.619852,0.14087 -0.619852,0.14087 l -0.52124,-0.5635 -1.704762,-1.43541 -0.199228,-0.63753 -0.438301,-0.6973 -0.577762,-0.21915 -1.075831,-0.0996 -0.557839,-0.15938 -0.697298,-0.73715 c 0,0 -0.458225,-0.41838 -0.537916,-0.41838 -0.07969,0 -0.577761,0.15939 -0.577761,0.15939 l -1.016064,-0.27892 -0.697298,-0.67738 -0.338688,-0.8766 -1.852821,-1.77313 c 0,0 -0.796912,0.8766 -0.657452,0.91645 0.139459,0.0398 -0.438302,0.0598 -0.438302,0.0598 l -0.757067,0.85668 -1.155523,-0.0399 -0.01992,-1.81298 -0.577762,-0.89652 -5.339312,-4.60217 -0.796912,-0.19923 -0.976218,0.0797 -0.757067,0.0797 -0.338687,1.09576 -0.77699,0.259 -2.13174,-0.15939 -0.13946,-0.0398 z"
-          sodipodi:nodetypes="cscccsccccsccccccccccccccccccccccccccccccccccccccccssssccccscccccccccscccccscccccccccccccc"
-          inkscape:label="cisplatina" />
+
         <path id="path1-38"
           style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.275166;stroke-dasharray:none;stroke-opacity:1"
           d="m 118.4657,268.02972 1.19864,0.63878 c 0,0 0.55937,0.43916 0.79909,0.59886 0.23974,0.15969 0.23974,0.63878 0.23974,0.63878 0,0 0.23973,0.59886 0.31963,0.79848 0.0799,0.19962 0.5194,0.63878 0.67923,0.75855 0.15982,0.11977 0.47946,0.19962 0.99885,0.31939 0.51942,0.11978 0.15983,0.0799 0.39955,0.35932 0.23974,0.27947 0.39955,0.43916 0.39955,0.43916 l 0.79909,0.31938 1.03883,-0.19961 0.71918,-0.04 0.5194,0.11977 0.67924,0.3194 h 0.67922 l 1.15868,0.0399 0.47946,0.11978 0.04,0.55893 -0.35959,0.31939 -0.47945,0.27947 -0.79909,0.27947 -0.0799,0.59885 0.31963,1.19772 0.04,0.87832 -0.7991,0.47909 -0.99885,0.63878 0.19976,0.51901 1.99773,-0.47908 0.4395,0.19961 0.60833,1.28957 1.38146,-1.77777 0.64099,-0.66212 0.29583,-0.3381 1.60598,-1.3031 0.965,-0.66211 0.6762,-0.40854 0.79595,-0.39445 0.3381,-0.0352 0.30993,-0.39445 0.24162,-0.35591 -0.0971,-0.0897 -0.0697,-0.21167 0.0946,-0.21667 v -0.22911 l 0.0323,-0.0929 0.22565,-0.339 0.0752,-0.2718 -0.11723,-0.17288 c 0.0344,-0.0385 0.0458,-0.16531 0.10366,-0.23399 l 0.44769,-0.56886 0.23949,-0.28175 0.0704,-0.35219 0.26766,-2.3667 c 0,0 0.155,-0.45082 0.2254,-0.54942 0.0704,-0.0986 0.39445,-0.25357 0.39445,-0.25357 l 0.30993,-0.19723 0.36628,-1.16927 0.16905,-0.54941 -0.30993,-0.61985 c 0,0 -0.35223,0.18309 -0.42263,0.23949 -0.0704,0.0564 -0.23949,0.39445 -0.23949,0.39445 0,0 -0.39448,-0.1831 -0.46488,-0.2254 -0.0705,-0.0423 -0.12679,-0.49309 -0.12679,-0.57759 0,-0.0845 0.25357,-0.76073 0.25357,-0.76073 0,0 0.2818,-0.39442 0.3381,-0.42262 0.0564,-0.0282 0.15497,-0.19723 0.15497,-0.19723 0,0 -0.12679,-0.66211 -0.32402,-0.87343 -0.19722,-0.21131 -0.66211,-0.88751 -0.66211,-0.88751 0,0 -0.15495,-0.39449 -0.16905,-0.46489 -0.0141,-0.0704 -0.14084,-0.95797 -0.18314,-1.05657 -0.0423,-0.0986 0.0422,-0.9157 0.0563,-1.0143 0.0141,-0.0986 0.0845,-0.64803 0.0845,-0.64803 l 0.23949,-0.52124 0.0282,-0.39445 -0.0282,-0.4508 0.0704,-0.64802 0.15496,-0.70438 -0.0564,-0.54942 -0.0704,-0.50715 -0.14087,-0.6762 0.12462,-0.41832 -0.42637,-0.019 h -0.4383 l -0.55784,0.19923 c 0,0 -0.4383,0.11949 -1.03599,0.15939 -0.59768,0.0398 -0.31876,-0.11954 -0.31876,-0.11954 0,0 -0.27892,-0.11954 -0.47815,-0.27892 -0.19922,-0.15943 -0.27892,-0.0399 -0.27892,-0.0399 h -0.51799 l -0.5977,0.31881 -0.51799,0.51799 c 0,0 -0.15938,0.15938 -0.27892,0.31877 -0.11953,0.15938 -0.15938,0.19922 -0.31876,0.27892 -0.15938,0.0797 -0.15938,0.11952 -0.31877,0.19922 -0.15938,0.0797 -0.23907,0.0797 -0.51799,0.15939 l -0.69002,0.19849 -0.91569,-0.4508 -0.64803,-0.66211 -0.52124,-0.40854 h -0.81708 l -0.52124,0.0986 c 0,0 -0.40854,0.0986 -0.53532,0.0986 -0.12679,0 -0.71847,-0.0423 -0.71847,-0.0423 l -0.49306,0.49306 -0.38037,0.1127 c 0,0 -0.28175,-0.25357 -0.38036,-0.3381 -0.0986,-0.0845 -0.35219,-0.28175 -0.46489,-0.30992 -0.1127,-0.0282 -0.36628,-0.0704 -0.36628,-0.0704 l -0.57759,0.2254 -0.26766,0.23949 c 0,0 -0.23949,0.5635 -0.25358,0.63394 -0.0141,0.0704 -0.46489,0.36627 -0.46489,0.36627 0,0 -0.39445,0.30993 -0.53532,0.30993 h -0.80299 c -0.14088,0 -0.60577,-0.0986 -0.77482,-0.0986 -0.16905,0 -0.39445,-0.1127 -0.50715,-0.1127 -0.1127,0 -0.3381,0.0564 -0.53533,0.16905 -0.19722,0.1127 -0.4508,0.29584 -0.53532,0.4508 -0.0845,0.15496 -0.26767,0.29584 -0.28175,0.35219 -0.0141,0.0564 -0.23949,0.21131 -0.21132,0.3381 0.0282,0.12679 0,0.59168 0,0.59168 0,0 0.18314,0.46489 0.2254,0.53532 0.0423,0.0704 0.16905,0.33811 0.16905,0.43672 0,0.0986 -0.0423,0.40854 0.0423,0.43671 0.0845,0.0282 0.60576,-0.0141 0.6762,-0.0141 0.0704,0 0.29584,0.23949 0.36627,0.28176 0.0704,0.0423 0.16906,0.0282 0.23949,0.30992 0.0704,0.28175 0.21132,0.52124 0.18314,0.66212 -0.0282,0.14087 -0.18314,0.46489 -0.28175,0.5635 -0.0986,0.0986 -0.40854,0.47898 -0.50715,0.54941 -0.0986,0.0704 -0.25358,0.29584 -0.46489,0.4508 -0.21131,0.15497 -0.25358,0.25358 -0.36628,0.33811 -0.1127,0.0845 -0.2254,0.16905 -0.32401,0.25357 -0.0986,0.0845 -0.12679,0.28175 -0.40854,0.30993 -0.28175,0.0282 -0.57759,-0.0564 -0.76073,0.0986 -0.18314,0.15496 -0.40854,0.32401 -0.52124,0.42263 -0.1127,0.0986 -0.18314,0.4508 -0.19722,0.52124 -0.0141,0.0704 -0.43672,0.64802 -0.43672,0.64802 l -0.46489,0.0141 -0.60576,0.0845 c 0,0 -0.0845,0.19722 -0.18314,0.29584 -0.0986,0.0986 -0.16905,0.74664 -0.16905,0.74664 0,0 1.44951,-0.0394 1.57901,0.79741 l 0.75707,0.57776 1.0061,0.21915 0.37317,0.15266 z"
@@ -189,16 +277,27 @@
           sodipodi:nodetypes="csssscscsccccccsscccscsccssscssssssssssssscsscssssscccsccccccscssccsccccscccccccccccccccccccccccscscscssssccsssssscssccccsccsscsssssccscsssccsccccscccsccccscssscsscsccccscccccccccccccccccccccccccccccccccccccccccccccccccccccccssssssssssssssssssssssssssscccccccsssssssccsssssssssccsccccssssssssssscsssssscsscsssssscsssssssssccscssssssssssccssscscscsssssccsssssscscssssscssssssccscsssscsssssccccscssscccsssscscscsscsccsc"
           inkscape:label="pernambuco" />
       </g>
+      <g inkscape:label="Mapa" id="layer2" inkscape:groupmode="layer" style="display:inline"
+        transform="translate(-14.43417,-12.19049)"
+        onmousemove="showTooltip(event, '1822-1825', '../mudancasTerritoriais/assets/images/pagina_1822_pt2/Flag_of_the_Provincia_Cisplatina.svg.png', 'Cisplatina', this, 'red');"
+        onmouseout="hideTooltip();" onmouseleave="originalColor(this);" onclick="openModal('brasil_antes');">
+        <path id="cisplatina"
+          style="display:inline;fill:url(#imgPattern1);fill-opacity:1;stroke:red;stroke-width:0.29646421;stroke-dasharray:none;stroke-opacity:1"
+          d="m 70.409737,286.78328 -1.825376,2.09853 0.521143,2.35417 -1.835077,5.01899 0.396616,0.83491 -0.523804,1.77999 -0.887092,0.53155 0.378176,1.17879 -0.354175,1.1069 0.891803,0.96589 -0.965539,0.66844 0.403062,5.25225 c -0.687426,-0.20641 -1.428928,-0.72376 -1.915509,0.22469 -0.18694,0.80817 -0.184643,1.47872 0.211137,1.86309 -0.442452,2.28006 -0.04446,3.15943 -0.05356,4.71719 1.563099,1.2345 3.715765,2.20697 4.425583,3.82071 l 3.836566,-0.15999 5.851898,2.75012 0.755997,-0.0127 c 0.747894,0.88038 1.569714,1.66776 3.931994,0.51715 l 4.162905,-0.0254 0.46836,0.64408 1.34812,-0.44757 1.29047,0.88636 6.05134,-2.78084 1.30069,-0.63008 0.79432,-0.5319 0.0839,-0.49265 0.60977,-0.15437 0.365865,-0.73297 v -0.4508 l 0.19722,-0.5635 0.28175,-0.59168 -0.11105,-0.96147 0.008,-1.0893 c 0,0 0.19922,-0.47815 0.19922,-0.59769 v -1.35474 l 0.49808,-0.72719 -0.55784,-1.17545 0.13945,-0.78694 c 0,0 0.51803,-0.47811 0.58773,-0.48811 0.0697,-0.01 1.01606,-0.17931 1.01606,-0.17931 l 0.6973,-0.55784 0.27892,-0.57776 c 0,0 -0.0299,-0.69807 -0.0199,-0.75707 l 0.0564,-0.33585 0.84849,-0.33104 0.0845,-0.4508 -0.35219,-0.59168 -0.32401,-0.16905 -1.01431,-0.35219 c 0,0 -0.9016,-0.59167 -1.00021,-0.69029 -0.0986,-0.0986 -1.01431,-0.6762 -1.11292,-0.87343 -0.0986,-0.19722 -0.15496,-0.69029 -0.19722,-0.94386 -0.0423,-0.25358 -0.16905,-0.4508 -0.338105,-0.74664 -0.169051,-0.29584 -0.394452,-0.76073 -0.394452,-0.76073 l -0.662115,-0.35219 -0.591677,-0.59168 -0.986129,-0.47897 c 0,0 -0.309926,-0.0986 -0.394451,-0.0563 -0.08452,0.0423 -0.619852,0.14087 -0.619852,0.14087 l -0.52124,-0.5635 -1.704762,-1.43541 -0.199228,-0.63753 -0.438301,-0.6973 -0.577762,-0.21915 -1.075831,-0.0996 -0.557839,-0.15938 -0.697298,-0.73715 c 0,0 -0.458225,-0.41838 -0.537916,-0.41838 -0.07969,0 -0.577761,0.15939 -0.577761,0.15939 l -1.016064,-0.27892 -0.697298,-0.67738 -0.338688,-0.8766 -1.852821,-1.77313 c 0,0 -0.796912,0.8766 -0.657452,0.91645 0.139459,0.0398 -0.438302,0.0598 -0.438302,0.0598 l -0.757067,0.85668 -1.155523,-0.0399 -0.01992,-1.81298 -0.577762,-0.89652 -5.339312,-4.60217 -0.796912,-0.19923 -0.976218,0.0797 -0.757067,0.0797 -0.338687,1.09576 -0.77699,0.259 -2.13174,-0.15939 -0.13946,-0.0398 z"
+          sodipodi:nodetypes="cscccsccccsccccccccccccccccccccccccccccccccccccccccssssccccscccccccccscccccscccccccccccccc"
+          inkscape:label="cisplatina" />
+      </g>
     </svg>
 
 
 
 
-    <svg width="1395.6187mm" height="1425.4062mm" viewBox="0 0 162.82218 303.57899" version="1.1" id="mapa-sem" class="map">
+    <svg width="1395.6187mm" height="1425.4062mm" viewBox="0 0 162.82218 303.57899" version="1.1" id="mapa-sem"
+      class="map">
       <defs id="defs1" />
       <g inkscape:label="Mapa" id="layer1" inkscape:groupmode="layer" style="display:inline"
         transform="translate(-14.434166,-12.19049)"
-        onmousemove="showTooltip(event, '1822-1889', 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Brazil_%281853-1889%29.svg', 'Império Do Brasil', this, 'green');"
+        onmousemove="showTooltip(event, '1822-1889', '../assets/bandeiras/Flag_of_Brazil_(1853_1889).svg.png', 'Império Do Brasil', this, 'blue');"
         onmouseout="hideTooltip();" onmouseleave="originalColor(this);" onclick="openModal('brasil_depois');">
         <path id="path1-8"
           style="display:inline;fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.275166;stroke-dasharray:none;stroke-opacity:1"
@@ -291,6 +390,13 @@
           inkscape:label="pernambuco" />
       </g>
     </svg>
+    <div class="svg-map-container">
+      <!-- Controles de mapa -->
+      <div class="map-controls">
+        <button class="map-btn" id="btnAntes" onclick="mapAnimator.desenharCisplatina()">← Anterior</button>
+        <button class="map-btn" id="btnDepois" onclick="mapAnimator.apagarCisplatina()">Próximo →</button>
+      </div>
+    </div>
 
   </div>
 
@@ -298,32 +404,24 @@
 
   <div class="map-overlay2" style="width: 290px;">
     <div class="legend active" style="width: 490px;">
-      <div class="card">
-        <h5>Legenda da linha do tempo</h5>
-        <!-- Época onde os -->
-        <div class="legend-item active">
-          <div class="legend-color" style="background-color: #b71c1c; width: 20px; height: 20px; "></div>
-          <span>Brasil Colonial (1530 a 1822) </span>
-        </div>
-
-        <div class="legend-item active">
-          <div class="legend-color" style="background-color: #FFD700; width: 20px; height: 20px; "></div>
-          <span>Brasil Imperial (1822 a 1889) </span>
-        </div>
-
-        <div class="legend-item active">
-          <div class="legend-color" style="background-color: #006400; width: 20px; height: 20px; "></div>
-          <span>Brasil República (1889 - Atual) </span>
-        </div>
+      <h5>Legenda da linha do tempo</h5>
+      <!-- Época onde os -->
+      <div class="legend-item active">
+        <div class="legend-color" style="background-color: #b71c1c; width: 20px; height: 20px; "></div>
+        <span>Brasil Colonial (1530 a 1822) </span>
       </div>
-      <div class="card" >
-        <h5>Navegue entre mapas de informações diferentes</h5>
-        <div id="botoes">
-          <button id="btnAntes" class="btn btn-primary" onclick="desenharCisplatina()">Antes</button>
-          <button id="btnDepois" class="btn btn-primary" onclick="apagarCisplatina()">Depois</button>
-        </div>
+
+      <div class="legend-item active">
+        <div class="legend-color" style="background-color: #FFD700; width: 20px; height: 20px; "></div>
+        <span>Brasil Imperial (1822 a 1889) </span>
+      </div>
+
+      <div class="legend-item active">
+        <div class="legend-color" style="background-color: #006400; width: 20px; height: 20px; "></div>
+        <span>Brasil República (1889 - Atual) </span>
       </div>
     </div>
+
   </div>
 
   <div id="map">
@@ -337,15 +435,15 @@
           <h5>Legenda</h5>
 
           <div class="legend-item active" id="legenda-com">
-            <div class="legend-color" style="background-color: #ff0202; width: 20px; height: 20px; ">
+            <div class="legend-color" style="border-width: 3px; border-color: #ff0202; width: 20px; height: 20px; ">
             </div>
             <span>Território da Cisplatina</span>
           </div>
 
           <div class="legend-item " id="legenda-sem">
-            <div class="legend-color" style="background-color: green; width: 20px; height: 20px; ">
+            <div class="legend-color" style="border-width: 3px; border-color: blue; width: 20px; height: 20px; ">
             </div>
-            <span>Território do Império Brasileiro</span>
+            <span>Território do Império Brasileiro pós Guerra da Cisplatina</span>
           </div>
 
         </div>
@@ -368,21 +466,43 @@
                   <div>
                     <h6 class="font-weight-bold text-secondary">Resumo da Guerra da Cisplatina</h6>
                     <p class="font-weight-bold text-secondary">
-                      A “Guerra da Cisplatina” ou “Guerra del Brasil” (como é conhecida fora do Brasil) foi um confronto armado ocorrido entre 1825 a 1828, envolvendo o Império do Brasil, as Províncias Unidas do Rio da Prata e os habitantes da Província Cisplatina. A região da Cisplatina (Banda Oriental) era cobiçada por Brasil e Províncias Unidas (Argentina), devido à sua localização estratégica no estuário do Rio da Prata.
+                      A “Guerra da Cisplatina” ou “Guerra del Brasil” (como é conhecida fora do Brasil) foi um confronto
+                      armado ocorrido entre 1825 a 1828, envolvendo o Império do Brasil, as Províncias Unidas do Rio da
+                      Prata e os habitantes da Província Cisplatina. A região da Cisplatina (Banda Oriental) era
+                      cobiçada por Brasil e Províncias Unidas (Argentina), devido à sua localização estratégica no
+                      estuário do Rio da Prata.
                     </p>
                     <p class="font-weight-bold text-secondary">
                     </p>
                     <p class="font-weight-bold text-secondary">
-                      As forças imperiais contavam com cerca de 10.000 homens espalhados pela Província, dos quais a maioria era recrutada localmente e não possuía preparo militar. Enquanto isso, as forças das Províncias Unidas do Rio da Prata (províncias do vice-reinado espanhol que formaram a Argentina) iniciaram as investidas com um exército de pouco mais de 800 homens, sob o comando de Juan de las Heras, governador da Província de Buenos Aires. Contudo, a população uruguaia aderiu maciçamente às Províncias Unidas, fortalecendo seu exército e equiparando-o ao exercito brasileiro.
+                      As forças imperiais contavam com cerca de 10.000 homens espalhados pela Província, dos quais a
+                      maioria era recrutada localmente e não possuía preparo militar. Enquanto isso, as forças das
+                      Províncias Unidas do Rio da Prata (províncias do vice-reinado espanhol que formaram a Argentina)
+                      iniciaram as investidas com um exército de pouco mais de 800 homens, sob o comando de Juan de las
+                      Heras, governador da Província de Buenos Aires. Contudo, a população uruguaia aderiu maciçamente
+                      às Províncias Unidas, fortalecendo seu exército e equiparando-o ao exercito brasileiro.
                     </p>
                     <p class="font-weight-bold text-secondary">
-                      Por outro lado, a Marinha do Brasil, era muito superior. Formada por cerca de 3 mil marinheiros (1.200 mercenários ingleses, irlandeses e norte-americanos), a esquadra imperial era composta por dezoito brigues, seis fragatas, e mais de vinte e cinco embarcações menores. Já a Marinha de Buenos Aires contava com os brigues General Belgrano (14 canhões) e General Balacre (14 canhões), as corvetas 25 de Mayo (28 canhões), Independencia (28 canhões) e Chacabuco (20 canhões), a frigata Buenos Aires e algumas canhoneiras.
+                      Por outro lado, a Marinha do Brasil, era muito superior. Formada por cerca de 3 mil marinheiros
+                      (1.200 mercenários ingleses, irlandeses e norte-americanos), a esquadra imperial era composta por
+                      dezoito brigues, seis fragatas, e mais de vinte e cinco embarcações menores. Já a Marinha de
+                      Buenos Aires contava com os brigues General Belgrano (14 canhões) e General Balacre (14 canhões),
+                      as corvetas 25 de Mayo (28 canhões), Independencia (28 canhões) e Chacabuco (20 canhões), a
+                      frigata Buenos Aires e algumas canhoneiras.
                     </p>
                     <p class="font-weight-bold text-secondary">
-                      Assim, enquanto as forças imperiais venciam as forças republicanas na Batalha de Monte Santiago (1827), Fructuoso Rivera tomava de assalto o Território dos Sete Povos das Missões (1828). Enquanto isso, o impasse permanecia e a Colônia do Sacramento, bem como Montevidéu, continuavam sob o domínio brasileiro. Por outro lado, a batalha naval, com o bloqueio a Buenos Aires, enfraqueceu gradualmente as forças das Províncias Unidas, apesar de suas embarcações menores serem capazes furar o bloqueio para enviar suprimentos aos uruguaios.
+                      Assim, enquanto as forças imperiais venciam as forças republicanas na Batalha de Monte Santiago
+                      (1827), Fructuoso Rivera tomava de assalto o Território dos Sete Povos das Missões (1828).
+                      Enquanto isso, o impasse permanecia e a Colônia do Sacramento, bem como Montevidéu, continuavam
+                      sob o domínio brasileiro. Por outro lado, a batalha naval, com o bloqueio a Buenos Aires,
+                      enfraqueceu gradualmente as forças das Províncias Unidas, apesar de suas embarcações menores serem
+                      capazes furar o bloqueio para enviar suprimentos aos uruguaios.
                     </p>
                     <p class="font-weight-bold text-secondary">
-                      Por fim, em função da pressão britânica e francesa para o fim do conflito, o Império do Brasil e as Províncias Unidas do Rio da Prata assinaram a “Convenção Preliminar de Paz” em 27 de agosto de 1828, no Rio de Janeiro, reconhecendo ainda a independência da recém criada República Oriental do Uruguai.
+                      Por fim, em função da pressão britânica e francesa para o fim do conflito, o Império do Brasil e
+                      as Províncias Unidas do Rio da Prata assinaram a “Convenção Preliminar de Paz” em 27 de agosto de
+                      1828, no Rio de Janeiro, reconhecendo ainda a independência da recém criada República Oriental do
+                      Uruguai.
                     </p>
                   </div>
                 </div>
@@ -476,11 +596,11 @@
             <p id="additionalInfo"></p>
 
             <!--<figure class="modal-figure">-->
-          <img id="image5" src="" alt="Imagem histórica 5" class="modal-image" />
+            <img id="image5" src="" alt="Imagem histórica 5" class="modal-image" />
             <figcaption id="image5Caption" class="modal-caption">
               Legenda da imagem 5
             </figcaption>
-          </figure>
+            </figure>
 
           </div>
           <!-- Fontes -->
@@ -511,9 +631,11 @@
             description4: "A ocupação da Cisplatina por Portugal aumentou a tensão e o desgaste que existiam na região platina porque o comandante brasileiro Lecor indispôs-se bastante com a população local, agindo de maneira autoritária. Além disso, o desgaste do Reino de Portugal com as Províncias Unidas, sobretudo, com a elite portenha (de Buenos Aires), aumentou consideravelmente.",
 
             additionalInfo: "O nome vem do prefixo latino \"cis\" que significa \"deste lado de\" e \"platina\", uma referência ao rio da Prata, assim o nome Cisplatina significa \"província do mesmo lado do rio da Prata\" aludindo ao fato de que, do ponto de vista brasileiro, a região está localizada na mesma margem do rio que o Brasil.",
-            image: " ",
+            image: "./assets/images/pagina_1825/imagemDeCima.png",
             image2: "./assets/images/pagina_1825/Tropas_brasileiras_1825.jpg",
             image2Caption: "Embarque da Infantaria portuguesa, na Ponta da Areia, Praia Grande, Rio de Janeiro, em 7 de Junho de 1816.",
+            image5: "./assets/images/pagina_1825/River_Plate.jpg",
+            image5Caption: "Foz do rio da Prata vista de satélite",
             sources: [
               {
                 name: "Wikipedia - Cisplatina (província)",
@@ -538,9 +660,7 @@
             imageCaption: "Lavalleja e o Juramento dos 33 Orientais",
             image2: "./assets/images/pagina_1825/Declaração_de_Guerra_contra_as_Províncias_Unidas_do_Rio_da_Prata_1825.jpg",
             image2Caption: "Declaração de Guerra contra as Províncias Unidas do Rio da Prata, 10 de dezembro de 1825.",
-            image3: "",
-            image3Caption: "",
-            image5:"./assets/images/pagina_1825/Juncal_MuratureJose_1865.png",
+            image5: "./assets/images/pagina_1825/Juncal_MuratureJose_1865.png",
             image5Caption: "Batalha de Juncal, por José Murature (1865)",
             sources: [
               {
@@ -553,7 +673,7 @@
               },
               {
                 name: "Wikimedia Commons - Batalha de Juncal, por José Murature (1865)",
-                url:"https://commons.wikimedia.org/wiki/File:Juncal_MuratureJose_1865.png"
+                url: "https://commons.wikimedia.org/wiki/File:Juncal_MuratureJose_1865.png"
               }
             ]
           }
@@ -727,8 +847,11 @@
         }
 
         const events = [
+          { year: 1654, label: "Insurreição Pernambucana" },
           { year: 1707, label: "Guerra dos Emboabas" },
           { year: 1789, label: "Inconfidência Mineira" },
+          { year: 1798, label: "Conjuração Baiana" },
+          { year: 1817, label: "Revolução Pernambucana" },
           { year: 1825, label: "Guerra da Cisplatina" },
           { year: 1903, label: "Tratado de Petrópolis" },
           { year: 1960, label: "Criação de Brasília" },
@@ -828,7 +951,7 @@
             slider.value = initialPosition;
 
             const backgroundValue = (initialPosition / 100) * 100;
-            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 40%, #FFD700 40%, #FFD700 55%, #006400 55%, #006400 100%)`;
+            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 55%, #FFD700 55%, #FFD700 68%, #006400 68%, #006400 100%)`;
           }
         }
 
@@ -839,7 +962,7 @@
           const mapaCom = document.getElementById('mapa-com');
           const mapaSem = document.getElementById('mapa-sem');
           const cisplatina = document.getElementById('cisplatina');
-        
+
 
           const btnCom = document.getElementById('btnAntes');
           const btnSem = document.getElementById('btnDepois');
@@ -868,7 +991,7 @@
 
             // Espera a animação terminar antes de trocar
             setTimeout(() => {
-              
+
               mapaCom.classList.remove('active');
               mapaSem.classList.add('active');
 
@@ -877,6 +1000,14 @@
 
             }, 2000); // mesmo tempo do transition no CSS
           });
+
+          // Ao carregar a página, exibe o sombreado (animação de desenho)
+          if (cisplatina) {
+            cisplatina.classList.remove('apagar');
+            // Força reflow para garantir animação ao adicionar a classe
+            void cisplatina.offsetWidth;
+            cisplatina.classList.add('desenhar');
+          }
         });
       </script>
 </body>
