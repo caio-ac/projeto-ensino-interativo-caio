@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa Interativo do Brasil</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .legend-highlight {
+      background: #ffe5e5;
+      border: 2px solid yellow;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <a href="../mudancasTerritoriais/pagina_1988.html" class="botao btn btn-primary">Voltar</a>
+
+    <div style="width: 5px;"></div>
+
+    <a href="pagina_1798.html" class="botao btn btn-primary"><i class="fas fa-backward"></i></a>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="0" class="slider" id="myRange" />
+      <div id="markers"></div>
+      <span id="current-event-label"></span>
+    </div>
+
+    <a href="pagina_1824.html" class="botao btn btn-primary"><i class="fas fa-forward"></i></a>
+
+    <div style="width: 5px;"></div>
+
+
+    <a href="-" class="botao btn btn-primary">Avançar</a>
+
+  </div>
+
+  <br /><br />
+
+
+  <svg width="1800mm" height="1363.517mm" viewBox="0 0 210 322.78035" version="1.1" id="svg1" xml:space="preserve">
+    <defs id="defs1">
+      
+    </defs>
+    <g inkscape:label="Mapa" id="layer1" inkscape:groupmode="layer" style="display:inline"
+      onmousemove="showTooltip(event, '1789', '../assets/bandeiras/Flag_of_the_Princes_of_Brazil.svg.png', 'Brasil Colonial', this, 'green');"
+      onmouseout="hideTooltip();" onmouseleave="originalColor(this);" onclick="openModal('brasil');">
+      
+    </g>
+    <g onmousemove="showTooltip(event, '1789', '../conflitos/assets/images/pagina_1817/Flag_of_pernambucan_revolt.svg.png', 'Brasil Colonial', this, 'rgb(222, 207, 0)');"
+      onmouseout="hideTooltip();" onmouseleave="originalColor(rgb(222, 207, 0));" onclick="openModal('brasil');">
+      
+    </g>
+  </svg>
+
+
+  <div class="map-overlay2" style="width: 290px;">
+    <div class="legend" style="width: 490px;">
+      <h5>Legenda da linha do tempo</h5>
+      <!-- Época onde os -->
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #b71c1c; width: 20px; height: 20px; "></div>
+        <span>Brasil Colonial (1530 a 1822) </span>
+      </div>
+
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #FFD700; width: 20px; height: 20px; "></div>
+        <span>Brasil Imperial (1822 a 1889) </span>
+      </div>
+
+      <div class="legend-item">
+        <div class="legend-color" style="background-color: #006400; width: 20px; height: 20px; "></div>
+        <span>Brasil República (1889 - Atual) </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="map">
+    <div class="map-overlay">
+      <h5>Informações sobre o Brasil</h5>
+      <p>Passe o mouse e clique nos mapas do Brasil para descobrir mais sobre sua situação histórica e eventos marcantes
+        ao longo da história.</p>
+
+      <div class="card">
+        <div class="legend">
+          <h5>Legenda</h5>
+
+          <!--  -->
+          <div class="legend-item">
+            <div class="legend-color"
+              style="border-width: 3px; border-color: rgb(222, 207, 0); width: 20px; height: 20px; ">
+            </div>
+            <span>Território da Capitania de Pernambuco</span>
+          </div>
+
+          <!--  -->
+          <div class="legend-item">
+            <div class="legend-color" style="border-width: 3px; border-color: green; width: 20px; height: 20px; "></div>
+            <span>Território do Brasil</span>
+          </div>
+
+        </div>
+
+        <button class="btn btn-primary" data-toggle="modal" data-target="#infoModal">Saiba Mais</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Informações sobre a Revolução Pernambucana</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column align-items-center">
+            <div class="modal-category">
+              <div>
+                <h6 class="font-weight-bold text-secondary">Resumo da Revolução Pernambucana</h6>
+                <p class="font-weight-bold text-secondary">
+
+                </p>
+                <p class="font-weight-bold text-secondary">
+
+                </p>
+                <p class="font-weight-bold text-secondary">
+
+                </p>
+                <p class="font-weight-bold text-secondary">
+
+                </p>
+                <p class="font-weight-bold text-secondary">
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="tooltip">
+  </div>
+
+  <div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img id="modalImage" src="" alt="Bandeira do País" class="modal-flag" />
+          <h5 class="modal-title" id="modalTitle">País</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <!-- Descrição Principal -->
+          <div id="modalDescription">
+            <p></p>
+          </div>
+
+          <!-- Primeira Imagem com Legenda -->
+          <figure class="modal-figure">
+            <img id="image1" src="" alt="Imagem histórica 1" class="modal-image" />
+            <figcaption id="image1Caption" class="modal-caption">
+              Legenda da imagem 1
+            </figcaption>
+          </figure>
+
+          <!-- Segundo Texto Descritivo -->
+          <div id="modalDescription2">
+            <p id="historicalInfo"></p>
+          </div>
+
+          <!-- Segunda Imagem com Legenda -->
+          <figure class="modal-figure">
+            <img id="image2" src="" alt="Imagem histórica 2" class="modal-image" />
+            <figcaption id="image2Caption" class="modal-caption">
+              Legenda da imagem 2
+            </figcaption>
+          </figure>
+
+          <!-- Terceiro Texto Descritivo -->
+          <div id="modalDescription3">
+            <p></p>
+          </div>
+
+          <!-- Terceira Imagem com Legenda 
+          <figure class="modal-figure">
+            <img id="image3" src="" alt="Imagem histórica 3" class="modal-image" />
+            <figcaption id="image3Caption" class="modal-caption">
+                Legenda da imagem 3
+            </figcaption>
+          </figure>-->
+
+
+          <!-- Quarto Texto Descritivo -->
+          <div id="modalDescription4">
+            <p></p>
+          </div>
+
+          <!-- Quarta Imagem com Legenda -->
+          <figure class="modal-figure">
+            <img id="image4" src="" alt="Imagem histórica 4" class="modal-image" />
+            <figcaption id="image4Caption" class="modal-caption">
+              Legenda da imagem 4
+            </figcaption>
+          </figure>
+
+          <!-- Sexto Texto Descritivo -->
+          <div id="modalDescription6">
+            <p></p>
+          </div>
+
+          <!-- Informações Adicionais -->
+          <div id="modalAdditionalInfo" class="additional-info-box">
+            <h6>Informações Adicionais</h6>
+            <p id="additionalInfo"></p>
+
+            <!--<figure class="modal-figure">-->
+            <img id="image5" src="" alt="Imagem histórica 5" class="modal-image" />
+            <figcaption id="image5Caption" class="modal-caption">
+              Legenda da imagem 5
+            </figcaption>
+            </figure>
+
+          </div>
+          <!-- Fontes -->
+          <div id="modalSources" class="modal-sources"></div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+              Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src=""></script>
+
+      <script>
+        const countryData = {
+          brasil: {
+            title: "Brasil",
+            imageURL: "../assets/bandeiras/Flag_of_Brazil.svg.png",
+            description: "",
+            description2: "",
+            description3: "",
+            description6: "",
+            additionalInfo: "",
+            image: "./assets/images/pagina_1817/Bênção_das_bandeiras_da_Revolução_de_1817.jpg",
+            imageCaption: "Bênção das bandeiras da Revolta de 1817",
+            image2: "./assets/images/pagina_1817/960px-Domingos_Martins.jpg",
+            image2Caption: "Domingos Martins, um dos líderes da Revolução Pernambucana.",
+            image4: "./assets/images/pagina_1817/José_Peregrino,_Revolução_Pernambucana_–_1817.jpg",
+            image4Caption: "José Peregrino, um dos revolucionários da Paraíba condenados à morte pelo crime de lesa-majestade, foi enforcado e esquartejado com dezenove anos incompletos.",
+            image5: "./assets/images/pagina_1817/Flag_of_pernambucan_revolt.svg.png",
+            image5Caption: "Bandeira da Revolução Pernambucana de 1817",
+            sources: [
+              {
+                name: "Brasil Escola - Revolução Pernambucana",
+                url: "https://brasilescola.uol.com.br/historiab/revolucao-pernambucana.htm"
+              },
+              {
+                name: "Wikipédia - Revolução Pernambucana",
+                url: "https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_Pernambucana"
+              }
+            ]
+          }
+        };
+
+        function openModal(country) {
+          const data = countryData[country.toLowerCase()];
+
+          if (!data) {
+            console.error("Dados do país não encontrados.");
+            return;
+          }
+
+          const setTextContent = (id, content, fallback = "Informação Indisponível") => {
+            document.getElementById(id).textContent = content || fallback;
+          };
+
+          const setImageAttributes = (id, src, alt, fallbackAlt = "Imagem não disponível") => {
+            const img = document.getElementById(id);
+            img.src = src || "";
+            img.alt = alt || fallbackAlt;
+          };
+
+          // Título do modal
+          setTextContent("modalTitle", data.title);
+
+          // Imagem da bandeira do país
+          setImageAttributes("modalImage", data.imageURL, `Bandeira de ${data.title}`);
+
+          // Descrição principal
+          setTextContent("modalDescription", data.description, "Sem descrição disponível");
+
+          // Primeira imagem e legenda
+          setImageAttributes("image1", data.image, `Imagem de ${data.title}`);
+          setTextContent("image1Caption", data.imageCaption, "Legenda indisponível");
+
+          // Segunda descrição
+          setTextContent("modalDescription2", data.description2);
+
+          // Segunda imagem e legenda
+          setImageAttributes("image2", data.image2, "Imagem histórica 2");
+          setTextContent("image2Caption", data.image2Caption, "Legenda indisponível");
+
+          // Terceira descrição
+          setTextContent("modalDescription3", data.description3);
+
+          //setImageAttributes("image3", data.image3, "Imagem histórica 3");
+          //setTextContent("image3Caption", data.image3Caption, "Legenda indisponível");
+
+          // Quarta descrição
+
+          setImageAttributes("image4", data.image4, "Imagem histórica 4");
+          setTextContent("image4Caption", data.image4Caption, "Legenda indisponível");
+
+          // Quinta imagem
+          setImageAttributes("image5", data.image5, "Imagem histórica 5");
+          setTextContent("image5Caption", data.image5Caption, "Legenda indisponível");
+
+          // Informações adicionais
+          setTextContent("additionalInfo", data.additionalInfo, "Nenhuma informação adicional disponível");
+
+          // Sexta descrição
+          setTextContent("modalDescription6", data.description6);
+
+
+
+
+          // Fontes de informação
+          const sourcesElement = document.getElementById("modalSources");
+          if (data.sources && data.sources.length > 0) {
+            sourcesElement.innerHTML = "Fontes: " + data.sources
+              .map((source, index, arr) =>
+                `<a href="${source.url}" target="_blank">${source.name}</a>${index < arr.length - 1 ? (index === arr.length - 2 ? ' e ' : ', ') : ''}`
+              ).join('');
+          } else {
+            sourcesElement.textContent = "Fontes: Nenhuma fonte disponível.";
+          }
+
+          // Exibe o modal
+          $("#countryModal").modal("show");
+        }
+
+        function showTooltip(evt, title, imageURL, description, area, color) {
+          let tooltip = document.getElementById("tooltip");
+          tooltip.innerHTML = ""; // Limpa o conteúdo anterior do tooltip
+
+          // Criar elementos para o título, imagem e descrição
+          let tooltipTitle = document.createElement("div");
+          tooltipTitle.textContent = title;
+          tooltipTitle.classList.add("tooltip-title"); // Aplica a classe ao título
+
+          let tooltipImg = document.createElement("img");
+          tooltipImg.src = imageURL;
+          tooltipImg.classList.add("tooltip-image"); // Adiciona a classe para centralizar a imagem
+
+          let tooltipDescription = document.createElement("div");
+          tooltipDescription.textContent = description;
+          tooltipDescription.classList.add("tooltip-text"); // Aplica a classe ao texto
+
+          // Adiciona os elementos ao tooltip
+          tooltip.appendChild(tooltipTitle);
+          tooltip.appendChild(tooltipImg);
+          tooltip.appendChild(tooltipDescription);
+
+          tooltip.style.display = "block"; // Exibe o tooltip
+
+          // Define a posição do tooltip
+          let tooltipWidth = tooltip.offsetWidth;
+          let tooltipHeight = tooltip.offsetHeight;
+
+          let left = evt.pageX + 10; // Posição horizontal
+          let top = evt.pageY + 10; // Posição vertical
+
+          // Ajusta a posição se o tooltip sair da tela
+          if (left + tooltipWidth > window.innerWidth) {
+            left = window.innerWidth - tooltipWidth - 10;
+          }
+          if (top + tooltipHeight > window.innerHeight) {
+            top = window.innerHeight - tooltipHeight - 10;
+          }
+
+          tooltip.style.left = left + "px";
+          tooltip.style.top = top + "px";
+
+          if (area.tagName === "g") {
+            changeGroupColor(area, color);
+          } else {
+            area.style.stroke = color;
+          }
+
+        }
+        function hideTooltip() {
+          var tooltip = document.getElementById("tooltip");
+          tooltip.style.display = "none"; // Oculta o tooltip
+
+        }
+
+        function changeGroupColor(group, color) {
+          // Itera sobre todos os filhos do grupo e altera a cor
+          const elements = group.querySelectorAll("*");
+          elements.forEach((element) => {
+            if (element.tagName === "path") {
+              element.style.stroke = color;
+            }
+          });
+        }
+
+        function originalColor(area) {
+          // Restaurar a cor original para grupos e elementos
+          if (area.tagName === "g") {
+            resetGroupColor(area);
+          } else {
+            area.style.stroke = "#000000";
+          }
+        }
+
+        function resetGroupColor(group) {
+          // Itera sobre todos os filhos do grupo e restaura a cor original
+          const elements = group.querySelectorAll("*");
+          elements.forEach((element) => {
+            if (element.tagName === "path") {
+              element.style.stroke = "#000000"; // Cor original
+            }
+          });
+        }
+
+        const events = [
+          { year: 1654, label: "Insurreição Pernambucana" },
+          { year: 1707, label: "Guerra dos Emboabas" },
+          { year: 1789, label: "Inconfidência Mineira" },
+          { year: 1798, label: "Conjuração Baiana" },
+          { year: 1817, label: "Revolução Pernambucana" },
+          { year: 1824, label: "Confederação do Equador" },
+          { year: 1825, label: "Guerra da Cisplatina" },
+          { year: 1835, label: "Ano da Instabilidade" },
+          { year: 1837, label: "Sabinada" },
+          { year: 1838, label: "Balaiada" },
+          { year: 1848, label: "Revolução Praieira" },
+          { year: 1903, label: "Tratado de Petrópolis" },
+          { year: 1960, label: "Criação de Brasília" },
+          { year: 1988, label: "Constituição atual" },
+        ];
+
+
+        const minYear = events[0].year;
+        const maxYear = events[events.length - 1].year;
+        const totalDuration = maxYear - minYear;
+
+        const markersContainer = document.getElementById("markers");
+        const slider = document.getElementById("myRange");
+
+        // Função para calcular a posição proporcional (alteração Caio)
+        function getProportionalPosition(year) {
+          // Distribuição igual dos marcadores, independente do ano
+          const index = events.findIndex(e => e.year === year);
+          if (index === -1) return 0;
+          return (index / (events.length - 1)) * 100;
+        }
+
+        function createMarkers() {
+          markersContainer.innerHTML = ""; // Limpa os marcadores anteriores
+          events.forEach((event, index) => {
+            const marker = document.createElement("span");
+            marker.className = "marker";
+            marker.setAttribute("data-year", event.year); // Adiciona o atributo data-year
+            let position = getProportionalPosition(event.year); // Obtém a posição proporcional
+
+            marker.style.left = `${position}%`; // Converte a posição em string com '%' para o estilo
+
+            // Alterna a posição vertical apenas pelo índice (alteração Caio)
+            marker.style.top = index % 2 === 1 ? "-60px" : "20px";
+
+            marker.innerHTML = `<span class="marker-title">${event.year}</span> 
+            <span class="marker-subtitle">${event.label}</span>`;
+
+            markersContainer.appendChild(marker); // Adiciona o marcador ao contêiner
+          });
+        }
+
+        function updateCurrentLabel(index) {
+          const label = document.getElementById("current-event-label");
+          if (!label) return;
+          const ev = events[index];
+          // Cor muda conforme a era histórica
+          let borderColor = "#b71c1c";                          // Colonial
+          if (ev.year >= 1822 && ev.year < 1889) borderColor = "#c8a800"; // Imperial
+          if (ev.year >= 1889) borderColor = "#006400";         // República
+          label.style.borderLeftColor = borderColor;
+          label.textContent = ev.year + " — " + ev.label;
+        }
+
+        createMarkers();
+
+        // Função para encontrar o índice do evento mais próximo com base no valor do slider
+        function getClosestEventIndex(value) {
+          let closestIndex = 0;
+          let closestDifference = Infinity;
+          events.forEach((event, index) => {
+            if (!event.markerOnly) {
+              // Apenas considere eventos que não sejam apenas marcadores
+              const eventPosition = getProportionalPosition(event.year);
+              const difference = Math.abs(value - eventPosition);
+              if (difference < closestDifference) {
+                closestDifference = difference;
+                closestIndex = index;
+              }
+            }
+          });
+          return closestIndex;
+        }
+
+        // Atualiza o fundo do slider e movimenta conforme o evento mais próximo
+        slider.addEventListener("input", function () {
+          const value = parseFloat(this.value);
+          const selectedIndex = getClosestEventIndex(value);
+          const selectedEvent = events[selectedIndex];
+          const eventPosition = getProportionalPosition(selectedEvent.year);
+          this.value = eventPosition; // Salta para o valor correto
+          updateCurrentLabel(selectedIndex);
+        });
+
+        // Faz o slider saltar para o evento correto ao final da movimentação
+        slider.addEventListener("change", function () {
+          const selectedIndex = getClosestEventIndex(parseFloat(this.value));
+          const selectedEvent = events[selectedIndex];
+          window.location.href = `pagina_${selectedEvent.year}.html`;
+        });
+
+        // Função para obter o ano atual da página
+        function getCurrentYearFromURL() {
+          const currentPage = window.location.href;
+          const yearMatch = currentPage.match(/pagina_(\d+)\.html/);
+          if (yearMatch && yearMatch[1]) {
+            return parseInt(yearMatch[1], 10);
+          }
+          return null; // Retorna null se não encontrar um ano válido
+        }
+
+        // Define o valor inicial do slider baseado no ano atual
+
+        function initializeSlider() {
+          const currentYear = getCurrentYearFromURL();
+          if (currentYear !== null) {
+            const initialPosition = getProportionalPosition(currentYear);
+            slider.value = initialPosition;
+            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 55%, #FFD700 55%, #FFD700 68%, #006400 68%, #006400 100%)`;
+            const initialIndex = events.findIndex(e => e.year === currentYear);
+            if (initialIndex !== -1) updateCurrentLabel(initialIndex);
+
+          }
+        }
+
+        // Chama a função para inicializar o slider quando a página for carregada
+        window.addEventListener("load", initializeSlider);
+
+
+      </script>
+</body>
+
+</html>

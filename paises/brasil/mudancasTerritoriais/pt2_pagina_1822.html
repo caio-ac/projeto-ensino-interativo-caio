@@ -32,6 +32,7 @@
     <div class="slidecontainer">
       <input type="range" min="0" max="100" value="0" class="slider" id="myRange" />
       <div id="markers"></div>
+      <span id="current-event-label"></span>
     </div>
 
     <a href="pagina_1903.html" class="botao btn btn-primary"><i class="fas fa-forward"></i></a>
@@ -311,8 +312,8 @@
             <span>🌾 Algodão</span>
           </div>
         </div>
-        
-   
+
+
         <button class="btn btn-primary" data-toggle="modal" data-target="#infoModal">Saiba Mais</button>
       </div>
       <div class="card mt-3">
@@ -324,173 +325,173 @@
       </div>
     </div>
   </div>
-      <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="infoModalLabel">Informações sobre as províncias do Brasil</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span>&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex flex-column align-items-center">
-                <div class="modal-category">
-                  <div class="font-weight-bold text-secondary">
-                    <h6>Resumo sobre a economia do Brasil</h6>
-                    <p>O mapa destaca as principais atividades econômicas das províncias brasileiras durante o período
-                      imperial. Cada cor representa um setor econômico predominante, refletindo a diversidade econômica
-                      do Brasil na época.
-                    </p>
-                    <p>No Nordeste, o açúcar continuava sendo um dos principais produtos, especialmente em províncias
-                      como Pernambuco e Bahia. Apesar disso, o setor já enfrentava declínio, devido à forte concorrência
-                      do açúcar das colônias europeias no Caribe. Além disso, o algodão, que havia prosperado durante as
-                      Guerras Napoleônicas por causa da falta do algodão norte-americano, também começou a perder
-                      importância após 1815, embora ainda fosse cultivado no Maranhão e em partes do Nordeste.
-                    </p>
-                    <p>
-                      No Sudeste, surgia o novo motor da economia brasileira: o café. Ainda em fase de crescimento em
-                      1822, a cultura cafeeira se expandia rapidamente no Vale do Paraíba, região entre Rio de Janeiro e
-                      São Paulo. O café logo se tornaria o principal produto de exportação do país, sustentando grande
-                      parte da economia do Império durante o século XIX. O açúcar também ainda era produzido nessa
-                      região, especialmente no Rio de Janeiro.
-                    </p>
-                    <p>
-                      No Sul, a pecuária tinha papel importante, especialmente no Rio Grande do Sul, onde se produzia o
-                      charque — carne salgada e seca — usado para alimentar escravizados e populações urbanas. A
-                      pecuária também era relevante no sertão nordestino, em províncias como o Ceará e o Piauí, onde o
-                      gado servia tanto para transporte quanto para alimentação.
-                    </p>
-                    <p>
-                      Nas antigas regiões mineradoras de Minas Gerais, Mato Grosso e Goiás, a extração de ouro e
-                      diamantes estava em decadência. O grande ciclo do ouro do século XVIII havia chegado ao fim, e as
-                      minas mais ricas estavam esgotadas. Mesmo assim, a mineração ainda existia em pequena escala,
-                      contribuindo pouco para a economia nacional.
-                    </p>
-                    <p>
-                      Por fim, no Norte, a extração amazônica ainda era modesta. A região se dedicava à coleta de
-                      produtos naturais, como madeiras, cacau, ervas e sementes, mas ainda não havia iniciado o famoso
-                      ciclo da borracha, que só ganharia força no final do século XIX. Mesmo assim, o comércio fluvial
-                      na Amazônia já ligava a região ao exterior e às outras partes do país.
-                    </p>
-                    <p>É importante ressaltar que nem todas as bandeiras das províncias são oficias, sendo algumas
-                      extra-oficiais.</p>
-                    <h6>Créditos das bandeiras das províncias:</h6>
-                    <ul>
-                      <li>
-                        Bandeira da Província do Grão-Pará: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_(Gr%C3%A3o)_Par%C3%A1.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província de Goiás: <a
-                          href="https://commons.wikimedia.org/wiki/File:Provincia_de_Goiaz.png"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província de São Paulo: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_S%C3%A3o_Paulo.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Espírito Santo : <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Esp%C3%ADrito_Santo.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Rio de Janeiro: <a
-                          href="https://pt.wikipedia.org/wiki/Ficheiro:Bandeira_Prov%C3%ADncia_Rio_de_Janeiro.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província de Minas Gerais: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Minas_Gerais.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província da Bahia: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_da_Bahia.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província de Pernambuco: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Pernambuco.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Rio Grande do Sul: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_S%C3%A3o_Pedro_do_Rio_Grande_do_Sul.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província de Santa Catarina: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Santa_Catarina.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província de Sergipe: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Sergipe.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Rio Grande do Norte: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Rio_Grande_do_Norte.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província da Paraíba: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_da_Para%C3%ADba.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Piauí: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Piau%C3%AD.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Maranhão: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Maranh%C3%A3o.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Alagoas: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Alagoas.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Mato Grosso: <a
-                          href="https://pt.wikipedia.org/wiki/Ficheiro:Provincia_do_mato_grosso.png"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província do Ceará: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_Cear%C3%A1.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Informações sobre as províncias do Brasil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column align-items-center">
+            <div class="modal-category">
+              <div class="font-weight-bold text-secondary">
+                <h6>Resumo sobre a economia do Brasil</h6>
+                <p>O mapa destaca as principais atividades econômicas das províncias brasileiras durante o período
+                  imperial. Cada cor representa um setor econômico predominante, refletindo a diversidade econômica
+                  do Brasil na época.
+                </p>
+                <p>No Nordeste, o açúcar continuava sendo um dos principais produtos, especialmente em províncias
+                  como Pernambuco e Bahia. Apesar disso, o setor já enfrentava declínio, devido à forte concorrência
+                  do açúcar das colônias europeias no Caribe. Além disso, o algodão, que havia prosperado durante as
+                  Guerras Napoleônicas por causa da falta do algodão norte-americano, também começou a perder
+                  importância após 1815, embora ainda fosse cultivado no Maranhão e em partes do Nordeste.
+                </p>
+                <p>
+                  No Sudeste, surgia o novo motor da economia brasileira: o café. Ainda em fase de crescimento em
+                  1822, a cultura cafeeira se expandia rapidamente no Vale do Paraíba, região entre Rio de Janeiro e
+                  São Paulo. O café logo se tornaria o principal produto de exportação do país, sustentando grande
+                  parte da economia do Império durante o século XIX. O açúcar também ainda era produzido nessa
+                  região, especialmente no Rio de Janeiro.
+                </p>
+                <p>
+                  No Sul, a pecuária tinha papel importante, especialmente no Rio Grande do Sul, onde se produzia o
+                  charque — carne salgada e seca — usado para alimentar escravizados e populações urbanas. A
+                  pecuária também era relevante no sertão nordestino, em províncias como o Ceará e o Piauí, onde o
+                  gado servia tanto para transporte quanto para alimentação.
+                </p>
+                <p>
+                  Nas antigas regiões mineradoras de Minas Gerais, Mato Grosso e Goiás, a extração de ouro e
+                  diamantes estava em decadência. O grande ciclo do ouro do século XVIII havia chegado ao fim, e as
+                  minas mais ricas estavam esgotadas. Mesmo assim, a mineração ainda existia em pequena escala,
+                  contribuindo pouco para a economia nacional.
+                </p>
+                <p>
+                  Por fim, no Norte, a extração amazônica ainda era modesta. A região se dedicava à coleta de
+                  produtos naturais, como madeiras, cacau, ervas e sementes, mas ainda não havia iniciado o famoso
+                  ciclo da borracha, que só ganharia força no final do século XIX. Mesmo assim, o comércio fluvial
+                  na Amazônia já ligava a região ao exterior e às outras partes do país.
+                </p>
+                <p>É importante ressaltar que nem todas as bandeiras das províncias são oficias, sendo algumas
+                  extra-oficiais.</p>
+                <h6>Créditos das bandeiras das províncias:</h6>
+                <ul>
+                  <li>
+                    Bandeira da Província do Grão-Pará: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_(Gr%C3%A3o)_Par%C3%A1.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província de Goiás: <a
+                      href="https://commons.wikimedia.org/wiki/File:Provincia_de_Goiaz.png" target="_blank">Wikimedia
+                      Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província de São Paulo: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_S%C3%A3o_Paulo.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Espírito Santo : <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Esp%C3%ADrito_Santo.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Rio de Janeiro: <a
+                      href="https://pt.wikipedia.org/wiki/Ficheiro:Bandeira_Prov%C3%ADncia_Rio_de_Janeiro.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província de Minas Gerais: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Minas_Gerais.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província da Bahia: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_da_Bahia.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província de Pernambuco: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Pernambuco.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Rio Grande do Sul: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_S%C3%A3o_Pedro_do_Rio_Grande_do_Sul.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província de Santa Catarina: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Santa_Catarina.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província de Sergipe: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Sergipe.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Rio Grande do Norte: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Rio_Grande_do_Norte.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província da Paraíba: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_da_Para%C3%ADba.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Piauí: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Piau%C3%AD.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Maranhão: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_do_Maranh%C3%A3o.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Alagoas: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_de_Alagoas.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Mato Grosso: <a
+                      href="https://pt.wikipedia.org/wiki/Ficheiro:Provincia_do_mato_grosso.png"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província do Ceará: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_Cear%C3%A1.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
 
-                        Bandeira da Província da Paraíba: <a
-                          href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_da_Para%C3%ADba.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                      <li>
-                        Bandeira da Província da Cisplatina: <a
-                          href="https://commons.wikimedia.org/wiki/File:Flag_of_the_Provincia_Cisplatina.svg"
-                          target="_blank">Wikimedia Commons</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                    Bandeira da Província da Paraíba: <a
+                      href="https://commons.wikimedia.org/wiki/File:Bandeira_Prov%C3%ADncia_da_Para%C3%ADba.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                  <li>
+                    Bandeira da Província da Cisplatina: <a
+                      href="https://commons.wikimedia.org/wiki/File:Flag_of_the_Provincia_Cisplatina.svg"
+                      target="_blank">Wikimedia Commons</a>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
           </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
       </div>
-    
-  
+    </div>
+  </div>
+
+
 
   <div id="tooltip"></div>
 
@@ -830,6 +831,17 @@
             markersContainer.appendChild(marker); // Adiciona o marcador ao contêiner
           });
         }
+        function updateCurrentLabel(index) {
+          const label = document.getElementById("current-event-label");
+          if (!label) return;
+          const ev = events[index];
+          // Cor muda conforme a era histórica
+          let borderColor = "#b71c1c";                          // Colonial
+          if (ev.year >= 1822 && ev.year < 1889) borderColor = "#c8a800"; // Imperial
+          if (ev.year >= 1889) borderColor = "#006400";         // República
+          label.style.borderLeftColor = borderColor;
+          label.textContent = ev.year + " — " + ev.label;
+        }
 
         createMarkers();
 
@@ -858,8 +870,7 @@
           const selectedEvent = events[selectedIndex];
           const eventPosition = getProportionalPosition(selectedEvent.year);
           this.value = eventPosition; // Salta para o valor correto
-
-          const backgroundValue = (eventPosition / 100) * 100;
+          updateCurrentLabel(selectedIndex);
         });
 
         // Faz o slider saltar para o evento correto ao final da movimentação
@@ -885,9 +896,10 @@
           if (currentYear !== null) {
             const initialPosition = getProportionalPosition(currentYear);
             slider.value = initialPosition;
-
-            const backgroundValue = (initialPosition / 100) * 100;
             slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 50%, #FFD700 50%, #FFD700 65%, #006400 65%, #006400 100%)`;
+            const initialIndex = events.findIndex(e => e.year === currentYear);
+            if (initialIndex !== -1) updateCurrentLabel(initialIndex);
+
           }
 
         }
