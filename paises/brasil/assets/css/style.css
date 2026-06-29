@@ -67,7 +67,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   padding: 0 15px;
   margin-top: 40px;
   flex-wrap: wrap;
@@ -99,13 +99,14 @@ body {
 }
 
 .slidecontainer {
-  flex-grow: 1;
-  margin: 0 10px;
+  flex: 1 1 850px;
+  margin: 0 0px;
   position: relative;
   top: 0;
   left: 0;
   right: 0;
-  min-width: 200px;
+  min-width: 620px;
+  
 }
 
 .slider {
@@ -152,10 +153,11 @@ body {
   position: absolute;
   font-size: 14px;
   text-align: center;
-  max-width: 120px;
+  width: 110px;
   transform: translateX(-50%);
   top: 20px;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.15;
   pointer-events: none;
 }
 
@@ -171,6 +173,7 @@ body {
   color: #555;
   display: block;
   white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 #tooltip {
@@ -401,6 +404,57 @@ svg {
   text-overflow: ellipsis;
 }
 
+.shape {
+  fill: #0f1724;
+  stroke: #123;
+  stroke-width: 2;
+}
+
+svg.map.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#cisplatina {
+  stroke: #ff0000;
+  /* vermelho */
+  stroke-width: 2;
+  fill: rgba(255, 0, 0, 0.3);
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  opacity: 0;
+  transition: stroke-dashoffset 2s ease-out, opacity 2s ease-in-out;
+}
+
+/* Quando desenhar */
+#cisplatina.desenhar {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  filter: drop-shadow(0 0 1px red);
+}
+
+/* Quando apagar */
+#cisplatina.apagar {
+  stroke-dashoffset: 800;
+  opacity: 0;
+}
+
+#current-event-label {
+  display: none;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 6px;
+  padding: 4px 8px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  border-left: 4px solid #b71c1c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Responsividade para diferentes tamanhos de tela */
 
 @media (max-width: 768px) {
@@ -424,6 +478,7 @@ svg {
   }
 
   .slidecontainer {
+    flex: 0 0 auto;
     margin: 20px 0;
     width: 100%;
     min-width: 0;
@@ -554,7 +609,8 @@ svg {
   }
 
   .slidecontainer {
-    margin: 65px 0;
+    flex: 0 0 auto;
+    margin: 20px 0;
   }
 
   .slider {

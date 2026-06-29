@@ -103,7 +103,7 @@
       inkscape:groupmode="layer"
       id="layer1"
       transform="matrix(0.99435183,0,0,0.99684439,-301.08931,863.77614)"><g 
-      onmousemove="showTooltip(event, '1940', 'https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Germany_%281935%E2%80%931945%29.svg', 'Queda da França', this, 'yellow');"
+      onmousemove="showTooltip(event, '1940', './images/Flag_of_Germany_(1935–1945).svg', 'Queda da França', this, 'yellow');"
       onmouseout="hideTooltip();"
       onmouseleave="originalColor(this);"
       onclick="openModal('germany');"
@@ -280,6 +280,7 @@
             
               <button class="btn btn-primary" data-toggle="modal" data-target="#infoModal">Saiba Mais</button>
             </div>
+            </div>
             
             <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
@@ -334,9 +335,8 @@
                 </div>
               </div>
             </div>    
-            </div>
             </div>                   
-        
+       
             <div id="tooltip"></div>
 
 <div
@@ -454,26 +454,26 @@
    const countryData = {  
     germany: {
         title: "Alemanha",
-        imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Germany_%283-2%29.svg",
+        imageURL: "./images/Flag_of_Germany.svg",
 
         description: "1940 foi um ano decisivo na Segunda Guerra Mundial, marcado pela agressão militar da Alemanha nazista e pela consolidação de territórios ocupados.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Battle_of_France_Infobox.png",
+        image: "./images/pagina_1940/Battle_of_France_Infobox.png",
         imageCaption: "No sentido horário, da parte superior esquerda: equipamentos abandonados no norte da França; exércitos alemães marchando em Paris; militares britânicos preparando uma posição defensiva; veículo blindado francês destruído; soldados franceses capturados pelos alemães; tanques alemães avançando pelas Ardenas.",
 
         description2: "Em 1940, a Alemanha nazista lançou a 'Blitzkrieg' (guerra-relâmpago), conquistando rapidamente a Dinamarca e a Noruega em abril. Essas campanhas garantiram o controle de rotas estratégicas no Atlântico e suprimentos de ferro da Suécia.",
-        image_dois: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Bundesarchiv_Bild_183-H26353%2C_Norwegen%2C_Kampf_um_ein_brennendes_Dorf.jpg",
+        image_dois: "./images/pagina_1940/Bundesarchiv_Bild_183-H26353%2C_Norwegen%2C_Kampf_um_ein_brennendes_Dorf.jpg",
         image_doisCaption: "Tropas alemãs avançando durante a Campanha da Noruega, abril de 1940.",
 
         description3: "Entre maio e junho, a Wehrmacht invadiu e ocupou a França, derrotando o exército francês e forçando a rendição. A França foi dividida em duas zonas: a ocupada pelos alemães e o regime colaboracionista de Vichy.",
-        image3: "https://upload.wikimedia.org/wikipedia/commons/3/36/German_occupation_of_Paris.jpg",
-        image3Caption: "Tropas alemãs entrando em Paris, junho de 1940.",
+        image3: "./images/pagina_1940/Adolf-Hitler-front-Paris-Eiffel-Tower-France-June-1940.webp",
+        image3Caption: "Nazi leaders in Paris",
 
         description4: "Outro evento marcante foi a Batalha da Inglaterra, onde a Alemanha tentou, sem sucesso, destruir a Força Aérea Real Britânica (RAF) e forçar o Reino Unido à submissão. O fracasso da Luftwaffe marcou o primeiro grande revés do regime nazista.",
-        image4: "https://upload.wikimedia.org/wikipedia/commons/1/19/Battle_of_Britain.png",
+        image4: "./images/pagina_1940/Battle_of_Britain.png",
         image4Caption: "A Batalha da Inglaterra, onde a RAF resistiu à Luftwaffe, 1940.",
 
         additionalInfo: "1940 também viu o endurecimento da repressão nazista nos territórios ocupados e a intensificação das políticas antissemitas, incluindo a deportação de judeus para campos de concentração.",
-        image5: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Bundesarchiv_Bild_101I-134-0791-29A%2C_Polen%2C_Ghetto_Warschau%2C_Ghettomauer.jpg",
+        image5: "./images/pagina_1940/Bundesarchiv_Bild_101I-134-0791-29A%2C_Polen%2C_Ghetto_Warschau%2C_Ghettomauer.jpg",
         image5Caption: "O gueto, sendo separado do resto de Varsóvia por um muro.",
 
         sources: [
@@ -483,7 +483,7 @@
             },
             {
                 name: "Fall of France",
-                url: "https://www.britannica.com/event/Battle-of-France"
+                url: "https://www.britannica.com/event/Battle-of-France-World-War-II"
             },
             {
                 name: "Battle of Britain",

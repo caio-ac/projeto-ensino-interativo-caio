@@ -102,7 +102,7 @@
       inkscape:label="Camada 1"
       inkscape:groupmode="layer"
       id="layer1"
-      transform="matrix(0.99435183,0,0,0.99684439,-301.08931,863.77614)"><g onmousemove="showTooltip(event, '1943', 'https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Germany_%281935%E2%80%931945%29.svg', 'Derrota em Stalingrado', this, 'yellow');"
+      transform="matrix(0.99435183,0,0,0.99684439,-301.08931,863.77614)"><g onmousemove="showTooltip(event, '1943', './images/Flag_of_Germany_(1935–1945).svg', 'Derrota em Stalingrado', this, 'yellow');"
       onmouseout="hideTooltip();"
       onmouseleave="originalColor(this);"
       onclick="openModal('germany');"
@@ -354,10 +354,11 @@
                 <div class="legend-border" style="border: 2px solid gray; width: 20px; height: 20px;"></div>
                 <span>República de Salò</span>
               </div>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#infoModal">Saiba Mais</button>
             </div>
                         
             
-              <button class="btn btn-primary" data-toggle="modal" data-target="#infoModal">Saiba Mais</button>
+              
             </div>
             
             <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
@@ -542,14 +543,14 @@
     const countryData = {  
     germany: {
         title: "Alemanha",
-        imageURL: "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Germany_%283-2%29.svg",
+        imageURL: "./images/Flag_of_Germany.svg",
 
         description: "1943 foi um ano decisivo na Segunda Guerra Mundial, marcando o início do colapso alemão com derrotas significativas nas frentes Oriental e Ocidental.",
-        image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/RIAN_archive_44732_Soviet_soldiers_attack_house.jpg",
+        image: "./images/pagina_1943/RIAN_archive_44732_Soviet_soldiers_attack_house.jpg",
         imageCaption: "Soldados soviéticos atacando posições alemãs.",
 
         description2: "Em fevereiro de 1943, a Batalha de Stalingrado terminou com a rendição do 6º Exército alemão, representando a primeira grande derrota da Alemanha nazista e um ponto de virada crucial na guerra.",
-        image_dois: "https://upload.wikimedia.org/wikipedia/commons/4/46/Bundesarchiv_Bild_183-E0406-0022-011%2C_Russland%2C_deutscher_Kriegsgefangener.jpg",
+        image_dois: "./images/pagina_1943/Bundesarchiv_Bild_183-E0406-0022-011%2C_Russland%2C_deutscher_Kriegsgefangener.jpg",
         image_doisCaption: "Soldado russo com um prisioneiro de guerra alemão.",
 
         description3: "Na Frente Ocidental, as forças alemãs foram derrotadas no Norte da África em maio, após a rendição do Afrika Korps, encerrando a campanha africana e abrindo caminho para a invasão Aliada na Europa.",
@@ -557,11 +558,11 @@
         image3Caption: "Rendição do Afrika Korps no Norte da África, maio de 1943.",
 
         description4: "A Alemanha também enfrentou perdas na campanha aérea. Em 1943, os bombardeios aliados se intensificaram, atingindo cidades como Hamburgo, onde a Operação Gomorra causou destruição massiva e um grande número de vítimas civis.",
-        image4: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Royal_Air_Force_Bomber_Command%2C_1942-1945._CL3400.jpg",
+        image4: "./images/pagina_1943/Royal_Air_Force_Bomber_Command%2C_1942-1945._CL3400.jpg",
         image4Caption: "O centro do distrito de Eilbek, Hamburgo, destruído pelos bombardeios.",
 
         additionalInfo: "Em julho de 1943, a Batalha de Kursk tornou-se a maior batalha de tanques da história, resultando em outra derrota estratégica para a Alemanha e consolidando a vantagem soviética na Frente Oriental.",
-        image5: "https://upload.wikimedia.org/wikipedia/commons/a/a7/RIAN_archive_613694_Red_Army_men_are_on_offensive_near_Bryansk.jpg",
+        image5: "./images/pagina_1943/RIAN_archive_613694_Red_Army_men_are_on_offensive_near_Bryansk.jpg",
         image5Caption: "Tropas soviéticas durante a contra-ofensiva (codinome Operação Kutuzov).",
 
         sources: [

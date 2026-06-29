@@ -67,7 +67,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   padding: 0 8px;
   margin-top: 40px;
   flex-wrap: wrap;
@@ -99,13 +99,13 @@ body {
 }
 
 .slidecontainer {
-  flex-grow: 1;
-  margin: 0 10px;
+  flex: 1 1 850px;
+  margin: 0 0px;
   position: relative;
   top: 0;
   left: 0;
   right: 0;
-  min-width: 200px;
+  min-width: 620px;
 }
 
 .slider {
@@ -153,10 +153,11 @@ body {
   position: absolute;
   font-size: 14px;
   text-align: center;
-  max-width: 120px;
+  width: 110px;
   transform: translateX(-50%);
   top: 20px;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.15;
   pointer-events: none;
 }
 
@@ -172,6 +173,7 @@ body {
   color: #555;
   display: block;
   white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 #tooltip {
@@ -425,6 +427,7 @@ svg {
   }
 
   .slidecontainer {
+    flex: 0 0 auto;
     margin: 20px 0;
     width: 100%;
     min-width: 0;
@@ -548,6 +551,7 @@ svg {
   }
 
   .slidecontainer {
+    flex: 0 0 auto;
     margin: 65px 0;
   }
 
