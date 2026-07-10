@@ -135,6 +135,7 @@
       "properties": {
         "name": "Brasil",
         "type": "Clique aqui para acessar mapas interativos do Brasil.",
+        "countryPage": "brasil.html",
         "location": "Localizado na América do Sul, o Brasil é o maior país do continente, abrangendo uma diversidade geográfica rica, com a Amazônia, vastos sistemas fluviais, serras e um longo litoral atlântico.",
         "facts": "Descoberto por portugueses em 1500, o Brasil conquistou sua independência em 1822. Desde então, desenvolveu uma sociedade multicultural influenciada por indígenas, africanos e europeus. Hoje, o Brasil é uma potência regional com economia diversificada e rica herança cultural. Seus biomas, como a Amazônia, têm papel fundamental na biodiversidade global e no combate às mudanças climáticas.",
         "imageCaption": "O Cristo Redentor no Rio de Janeiro.",
