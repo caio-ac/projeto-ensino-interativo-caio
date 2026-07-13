@@ -108,7 +108,9 @@ button.esri-icon-close {
 
 .esri-popup__content {
   margin: 0;
-  overflow: visible; 
+  overflow: auto;
+  min-height: 600px;
+  max-height: 1500px;
 }
 
 .esri-popup__header-title {
