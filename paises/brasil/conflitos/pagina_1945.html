@@ -190,15 +190,16 @@
                     <!--  -->
                     <div class="legend-item">
                         <div class="legend-color"
-                            style="border-width: 2px; border-color: #0206ff; width: 20px; height: 20px; background-color: #8688f9;"></div>
+                            style="border-width: 2px; border-color: #0206ff; width: 20px; height: 20px; background-color: #8688f9;">
                         </div>
-                        <span>Área de ação FEB</span>
                     </div>
-
+                    <span>Área de ação FEB</span>
                 </div>
 
             </div>
+
         </div>
+    </div>
     </div>
     <div id="tooltip">
     </div>
@@ -601,25 +602,25 @@
                 }
 
                 const events = [
-                        { year: 1654, label: "Insurreição Pernambucana" },
-                        { year: 1707, label: "Guerra dos Emboabas" },
-                        { year: 1789, label: "Inconfidência Mineira" },
-                        { year: 1798, label: "Conjuração Baiana" },
-                        { year: 1817, label: "Revolução Pernambucana" },
-                        { year: 1824, label: "Confederação do Equador" },
-                        { year: 1825, label: "Guerra da Cisplatina" },
-                        { year: 1835, label: "Ano da Instabilidade" },
-                        { year: 1837, label: "Sabinada" },
-                        { year: 1838, label: "Balaiada" },
-                        { year: 1848, label: "Revolução Praieira" },
-                        { year: 1864, label: "Guerra do Paraguai" },
-                        { year: 1897, label: "Guerra de Canudos" },
-                        { year: 1912, label: "Guerra do Contestado" },
-                        { year: 1932, label: "Revolução Constitucionalista" },
-                        { year: 1945, label: "FEB na Itália" },
-                        { year: 1964, label: "Golpe Militar" },
-                        { year: 1972, label: "Guerrilha do Araguaia" }
-                    ];
+                    { year: 1654, label: "Insurreição Pernambucana" },
+                    { year: 1707, label: "Guerra dos Emboabas" },
+                    { year: 1789, label: "Inconfidência Mineira" },
+                    { year: 1798, label: "Conjuração Baiana" },
+                    { year: 1817, label: "Revolução Pernambucana" },
+                    { year: 1824, label: "Confederação do Equador" },
+                    { year: 1825, label: "Guerra da Cisplatina" },
+                    { year: 1835, label: "Ano da Instabilidade" },
+                    { year: 1837, label: "Sabinada" },
+                    { year: 1838, label: "Balaiada" },
+                    { year: 1848, label: "Revolução Praieira" },
+                    { year: 1864, label: "Guerra do Paraguai" },
+                    { year: 1897, label: "Guerra de Canudos" },
+                    { year: 1912, label: "Guerra do Contestado" },
+                    { year: 1932, label: "Revolução Constitucionalista" },
+                    { year: 1945, label: "FEB na Itália" },
+                    { year: 1964, label: "Golpe Militar" },
+                    { year: 1972, label: "Guerrilha do Araguaia" }
+                ];
 
 
                 const minYear = events[0].year;
@@ -723,7 +724,7 @@
                     if (currentYear !== null) {
                         const initialPosition = getProportionalPosition(currentYear);
                         slider.value = initialPosition;
-                        slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 55%, #FFD700 55%, #FFD700 68%, #006400 68%, #006400 100%)`;
+                        slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 27%, #FFD700 27%, #FFD700 68%, #006400 68%, #006400 100%)`;
                         const initialIndex = events.findIndex(e => e.year === currentYear);
                         if (initialIndex !== -1) updateCurrentLabel(initialIndex);
                     }

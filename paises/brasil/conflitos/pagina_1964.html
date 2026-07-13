@@ -701,7 +701,7 @@
                         if (currentYear !== null) {
                             const initialPosition = getProportionalPosition(currentYear);
                             slider.value = initialPosition;
-                            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 55%, #FFD700 55%, #FFD700 68%, #006400 68%, #006400 100%)`;
+                            slider.style.background = `linear-gradient(to right, #b71c1c 0%, #b71c1c 27%, #FFD700 27%, #FFD700 68%, #006400 68%, #006400 100%)`;
                             const initialIndex = events.findIndex(e => e.year === currentYear);
                             if (initialIndex !== -1) updateCurrentLabel(initialIndex);
                         }
