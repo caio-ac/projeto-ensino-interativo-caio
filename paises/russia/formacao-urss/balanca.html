@@ -169,7 +169,7 @@
     <div class="container-power">
     <div class="battle-container">
         <div class="character">
-            <img id="trotsky-img" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/%D0%9B%D0%B5%D0%B2_%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B8%D1%87_%D0%A2%D1%80%D0%BE%D1%86%D0%BA%D0%B8%D0%B9.jpg" alt="Trotsky">
+            <img id="trotsky-img" src="./assets/images/pagina_balanca/Trotsky.jpg" alt="Trotsky">
             <div class="power-bar">
                 <div id="trotsky-power" class="power" style="width: 60%"></div>
             </div>
@@ -177,12 +177,12 @@
         </div>
 
         <div id="container-image" class="container-image">
-            <img id="event-image" class="event-image" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg" alt="Imagem do Evento">
+            <img id="event-image" class="event-image" src="./assets/images/Flag_of_the_Soviet_Union.svg" alt="Imagem do Evento">
             <p id="legend" class="legend">Balança de Poder da URSS</p>
         </div>
 
         <div class="character">
-            <img id="stalin-img" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/StalinCropped1943%28b%29.jpg" alt="Stalin">
+            <img id="stalin-img" src="./assets/images/pagina_balanca/StalinCropped1943(b).jpg" alt="Stalin">
             <div class="power-bar">
                 <div id="stalin-power" class="power stalin" style="width: 40%"></div>
             </div>
@@ -236,10 +236,10 @@
         const allEvents = [event1, event2, event3, event4];
 
         // Variáveis para as imagens dos eventos
-        const event1Image = 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Lenin_and_stalin_crop.jpg';
-        const event2Image = 'https://upload.wikimedia.org/wikipedia/commons/6/6e/Stalin_Rykov_Kamenev_Zinoviev_1925.jpg';
-        const event3Image = 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Leon_Trotsky_1928.jpg';
-        const event4Image = 'https://upload.wikimedia.org/wikipedia/commons/9/94/Trotskynina1915.jpg';
+        const event1Image = './assets/images/pagina_balanca/Lenin_and_stalin_crop.jpg';
+        const event2Image = './assets/images/pagina_balanca/Stalin_Rykov_Kamenev_Zinoviev_1925.jpg';
+        const event3Image = './assets/images/pagina_balanca/Leon_Trotsky_1928.jpg';
+        const event4Image = './assets/images/pagina_balanca/Trotskynina1915.jpg';
 
         function updateEventVisibility(currentIndex) {
             for (let i = 0; i < allEvents.length; i++) {
@@ -388,7 +388,7 @@
             stalinPower.style.width = '40%';
             stalinImg.classList.remove('shake');
             trotskyImg.classList.remove('shake');
-            eventImage.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg';
+            eventImage.src = './assets/images/Flag_of_the_Soviet_Union.svg';
             legend.textContent = 'Balança de Poder da URSS';
 
             allEvents.forEach(event => {
